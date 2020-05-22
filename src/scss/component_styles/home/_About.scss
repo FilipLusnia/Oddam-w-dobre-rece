@@ -1,0 +1,46 @@
+.about{
+    background-color: $color_1;
+    display: flex;
+    justify-content: space-between;
+    height: 90vh;
+    max-width: 100vw;
+}
+
+.about_container{
+    min-width: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;     
+    max-height: 100%;  
+}
+.about_text{    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+
+    .about_decor{
+        margin-bottom: 30px;
+        height: 26px;
+    }
+    .about_signature{
+        height: 100px;
+        margin-top: 30px;
+        transform: translate(170px, 0);
+    }
+
+    h1{
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    p{
+        font-size: 24px;
+        text-align: center;
+        line-height: 40px;
+    }
+}
+
+.about_img{
+    max-width: 60%;
+}

@@ -7,9 +7,9 @@ import {
 export default function LoginRouting() {
   return (
     <Router>
-      <div className="header_login">
-          <Link to="/logowanie">Login </Link>
-          <Link to="/rejestracja">Rejestracja</Link>
+      <div>
+          <Link to="/logowanie" className="header-top text">Zaloguj</Link>
+          <Link to="/rejestracja" className="header-top text-register">Załóż konto</Link>
       </div>
     </Router>
   )

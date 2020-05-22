@@ -9,6 +9,7 @@ import Home from './Home/Home';
 import Login from './Login';
 import Register from './Register';
 import Form from './Form';
+import Logoutn from './Logoutn';
 
 import '../scss/main.scss';
 
@@ -28,6 +29,9 @@ export default function App() {
         </Route>
         <Route exact path="/oddaj-rzeczy">
             <Form/>
+        </Route>
+        <Route exact path="/wylogowano">
+            <Logoutn/>
         </Route>
       </Switch>
     </Router>

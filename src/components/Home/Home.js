@@ -12,6 +12,9 @@ import LoginRouting from '../Routing/LoginRouting'
 
 import Main from "./Main"
 import YellowColumns from "./YellowColumns"
+import SimpleSteps from "./SimpleSteps"
+import About from "./About"
+import WhoWeHelp from "./WhoWeHelp"
 
 export default function Home() {
 
@@ -22,7 +25,7 @@ export default function Home() {
                     <LoginRouting/>
                 </div>
                 <div className="header-bottom">
-                    <button>Start</button>
+                    <button className="start-button">Start</button>
                     <button>O co chodzi?</button>
                     <button>O nas</button>
                     <button>Fundacja i organizacje</button>
@@ -31,6 +34,9 @@ export default function Home() {
             </div>
             <Main/>
             <YellowColumns/>
+            <SimpleSteps/>
+            <About/>
+            <WhoWeHelp/>
         </>
     )
 }

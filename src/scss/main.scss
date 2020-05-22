@@ -2,9 +2,14 @@
 @import "./settings/fonts";
 @import "./settings/colors";
 
-@import "component_styles/Home";
-@import "component_styles/Main";
-@import "component_styles/YellowColumns";
+@import "component_styles/home/Home";
+@import "component_styles/home/Main";
+@import "component_styles/home/YellowColumns";
+@import "component_styles/home/SimpleSteps";
+@import "component_styles/home/About";
+@import "component_styles/home/WhoWeHelp";
+
+@import "component_styles/routing/LoginRouting";
 
 body {
     font-family: $font-base;
