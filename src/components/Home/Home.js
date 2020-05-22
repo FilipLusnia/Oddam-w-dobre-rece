@@ -1,11 +1,8 @@
 import React from 'react';
-import * as Scroll from 'react-scroll';
+
 import { 
     Link, 
-    Element , 
-    animateScroll as scroll, 
-    duration,
-    scroller } from 'react-scroll'
+    Element} from 'react-scroll'
 
 import LoginRouting from '../Routing/LoginRouting'
 
@@ -25,7 +22,7 @@ export default function Home() {
                     <LoginRouting/>
                 </div>
                 <div className="header-bottom">
-                    <Link className="start-button" to="Main" smooth={true} duration={500} delay={80}>Start</Link>
+                    <Link className="start-button" to="Main" offset={100} smooth={true} duration={500} delay={80}>Start</Link>
                     <Link className="nav-button" to="SimpleSteps" smooth={true} duration={500} delay={80}>O co chodzi?</Link>
                     <Link className="nav-button" to="About" smooth={true} duration={600} delay={80}>O nas</Link>
                     <Link className="nav-button" to="WhoWeHelp" smooth={true} duration={700} delay={80}>Fundacja i organizacje</Link>

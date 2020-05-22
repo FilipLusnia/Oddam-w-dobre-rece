@@ -5,10 +5,10 @@ import {
 } from "react-router-dom";
 
 import { ReactComponent as Decor } from '../../assets/Decoration.svg';
-import { ReactComponent as Logo1 } from '../../assets/Icon-1.svg';
-import { ReactComponent as Logo2 } from '../../assets/Icon-2.svg';
-import { ReactComponent as Logo3 } from '../../assets/Icon-3.svg';
-import { ReactComponent as Logo4 } from '../../assets/Icon-4.svg';
+import icon1 from '../../assets/Icon-1.svg';
+import icon2 from '../../assets/Icon-2.svg';
+import icon3 from '../../assets/Icon-3.svg';
+import icon4 from '../../assets/Icon-4.svg';
 
 export default function SimpleSteps() {
 
@@ -20,25 +20,25 @@ export default function SimpleSteps() {
             </div> 
             <div className="steps_items">
                 <div className="steps_item one">
-                    <Logo1/>
+                    <img src={icon1} alt=""/>
                     <h1>Wybierz rzeczy</h1>
                     <h1>_______</h1>
                     <p>ubrania, zabawki, sprzęt i inne</p>
                 </div>
                 <div className="steps_item two">
-                    <Logo2/>
+                    <img src={icon2} alt=""/>
                     <h1>Spakuj je</h1>
                     <h1>_______</h1>
                     <p>skorzystaj z worków na śmieci</p>
                 </div>
                 <div className="steps_item three">
-                    <Logo3/>
+                    <img src={icon3} alt=""/>
                     <h1>Zamów kuriera</h1>
                     <h1>_______</h1>
                     <p>wybierz zaufane miejsce</p>
                 </div>
                 <div className="steps_item four">
-                    <Logo4/>
+                    <img src={icon4} alt=""/>
                     <h1>Zamów kuriera</h1>
                     <h1>________</h1>
                     <p>kurier przyjedzie w dogodnym terminie</p>

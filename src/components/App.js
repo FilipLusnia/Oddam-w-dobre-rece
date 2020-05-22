@@ -18,21 +18,11 @@ export default function App() {
 
     <Router>
       <Switch>
-        <Route exact path="/">
-            <Home/>
-        </Route>
-        <Route exact path="/logowanie">
-            <Login/>
-        </Route>
-        <Route exact path="/rejestracja">
-            <Register/>
-        </Route>
-        <Route exact path="/oddaj-rzeczy">
-            <Form/>
-        </Route>
-        <Route exact path="/wylogowano">
-            <Logoutn/>
-        </Route>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/logowanie" component={Login} />
+        <Route exact path="/rejestracja" component={Register} />
+        <Route exact path="/oddaj-rzeczy" component={Form} />
+        <Route exact path="/wylogowano" component={Logoutn} />
       </Switch>
     </Router>
   )
