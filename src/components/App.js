@@ -2,56 +2,34 @@ import React from 'react';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
+
+import Home from './Home/Home';
+import Login from './Login';
+import Register from './Register';
+import Form from './Form';
 
 import '../scss/main.scss';
 
-import Home from './Home';
-import Form from "./Form";
-import Login from "./Login";
-import Register from "./Register";
-import Logoutn from "./Logoutn";
-
-
-function App() {
+export default function App() {
   return (
 
     <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Start </Link>
-              <Link to="/oddaj-rzeczy">Oddaj_Rzeczy </Link>
-              <Link to="/logowanie">Login </Link>
-              <Link to="/rejestracja">Rejestracja</Link>
-            </li>
-          </ul>
-        </nav>
-
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route exact path="/oddaj-rzeczy">
-            <Form />
-          </Route>
-          <Route exact path="/logowanie">
-            <Login />
-          </Route>
-          <Route exact path="/rejestracja">
-            <Register />
-          </Route>
-          <Route exact path="/wylogowano">
-            <Logoutn />
-          </Route>
-        </Switch>
-      </div>
+      <Switch>
+        <Route exact path="/">
+            <Home/>
+        </Route>
+        <Route exact path="/logowanie">
+            <Login/>
+        </Route>
+        <Route exact path="/rejestracja">
+            <Register/>
+        </Route>
+        <Route exact path="/oddaj-rzeczy">
+            <Form/>
+        </Route>
+      </Switch>
     </Router>
-
   )
 }
-
-export default App;

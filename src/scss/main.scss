@@ -1,6 +1,10 @@
 @import "../../node_modules/reset-css/sass/reset";
 @import "./settings/fonts";
-@import "settings/colors";
+@import "./settings/colors";
+
+@import "component_styles/Home";
+@import "component_styles/Main";
+@import "component_styles/YellowColumns";
 
 body {
     font-family: $font-base;
