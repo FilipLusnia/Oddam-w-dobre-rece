@@ -45,9 +45,7 @@ export default function SimpleSteps() {
                 </div>
             </div>
             <div className="steps_button">
-                <Router>
-                    <Link to="/oddaj-rzeczy" className="steps_button text">ODDAJ RZECZY</Link>
-                </Router>
+                <Link to="/oddaj-rzeczy" className="steps_button text">ODDAJ RZECZY</Link>
             </div>
         </div>
     )
