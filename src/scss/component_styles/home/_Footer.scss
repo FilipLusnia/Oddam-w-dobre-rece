@@ -35,8 +35,7 @@
         color: $color_5;
     }
 
-    svg{
-        min-height: 30px;
+    img{
         width: 210px;
     }
 }
@@ -63,6 +62,7 @@
         padding: 0;
         padding-top: 10px;
         background: none;
+        margin-bottom: 10px;
     }
 }
 
@@ -71,10 +71,17 @@
     justify-content: space-between;
     max-width: 100%;
     margin: 30px 0 10px;
+    height: 116px;
 
     .name{
         display: flex;
         flex-direction: column;
+        justify-content: flex-start;
+        padding-bottom: 10px;
+
+        p {
+            margin: 0;
+        }
 
         .name_input{
             font-family: $font-base;
@@ -84,11 +91,18 @@
             width: 210px;
             margin-top: 10px;
             background: none;
+            max-height: 30px;
         }
     }
     .email{
         display: flex;
         flex-direction: column;
+        justify-content: flex-start;
+        padding-bottom: 10px;
+
+        p {
+            margin: 0;
+        }
 
         .email_input{
             font-family: $font-base;
@@ -98,6 +112,7 @@
             width: 210px;
             margin-top: 10px;
             background: none;
+            max-height: 30px;
         }
     }
 
@@ -107,8 +122,10 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: flex-start;
     min-width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+    height: 125px;
 }
 
 .form_btn{
@@ -121,6 +138,10 @@
     outline: none;
     cursor: pointer;
     transform: translate(265%, 0)
+}
+.form_btn:active{
+    background-color: rgba(230, 230, 230, 0.863);
+    transition: 0.1s;
 }
 
 .footer_bottom{

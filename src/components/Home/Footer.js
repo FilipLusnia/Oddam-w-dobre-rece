@@ -1,29 +1,85 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+
+import decor from '../../assets/Decoration.svg';
 
 
 export default function Footer() {
+
+    const [nameVal, setNameVal] = useState("");
+    const [emailVal, setEmailVal] = useState("");
+    const [textVal, setTextVal] = useState(""); 
+
+    const [nameBorder, setNameBorder] = useState();
+    const [emailBorder, setEmailBorder] = useState();
+    const [textBorder, setTextBorder] = useState();
+
+    const [nameErr, setNameErr] = useState("");
+    const [emailErr, setEmailErr] = useState();
+    const [textErr, setTextErr] = useState("");
+    const [succesMess, setSuccesMess] = useState("")
+
+    useEffect(()=> {
+
+    }, []);
+
+    const handleClick = (e)=> {
+        e.preventDefault();
+
+        if(nameVal.length < 3){
+            setNameErr("Podaj więcej niż 3 znaki!")
+            setNameBorder(errBorder);
+        } else if(isNaN(nameVal) === false){
+            setNameErr("To pole nie powinno zawierać cyfr!")
+            setNameBorder(errBorder);
+        } else {
+            setNameErr("")
+            setNameBorder();
+        }
+
+        if (emailVal.includes("@") === false || emailVal.includes(".") === false || emailVal < 5){
+            setEmailErr("Podano zły email!")
+            setEmailBorder(errBorder);
+        } else {
+            setEmailErr("");
+            setEmailBorder();
+        }
+
+        if(textVal < 120){
+            setTextErr("Wiadomość musi zawierać conajmniej 120 znaków!")
+            setTextBorder(errBorder);
+        } else {
+            setTextErr("");
+            setTextBorder();
+        }
+    }
+
+    const errStyle = {color: "red"};
+    const errBorder = {borderColor: "red"};
 
     return (
         <div className="footer">
             <div className="form_container">
                 <h1>Skontaktuj się z nami</h1>
-                {/* <svg className="about_decor" xmlns="http://www.w3.org/2000/svg" width="253" height="33" viewBox="0 0 253 33"><defs><clipPath id="a"><rect width="253" height="33" fill="none"/></clipPath></defs><g clip-path="url(#a)"><path d="M160.967,106.2l8.965-8.732-8.965-8.732-8.955,8.732,8.965,8.732" transform="translate(-34.472 -78.774)" fill="none" stroke="#1a1818" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.788"/><path d="M160.967,97.469l8.965-8.732-8.965-8.732-8.955,8.732Z" transform="translate(-34.472 -78.757)" fill="none" stroke="#1a1818" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.788"/><line x1="98.316" transform="translate(0.906 17.154)" fill="none" stroke="#1a1818" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.811"/><path d="M188.708,95.919l-5.638,5.491L172.016,90.645l2.155-2.1,4.679,4.558-4.679,4.558-13.21-12.866-13.19,12.866L143.093,93.1l4.679-4.558,2.155,2.1-11.053,10.766-5.638-5.491" transform="translate(-34.472 -78.757)" fill="none" stroke="#1a1818" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.788"/><line x1="98.316" transform="translate(153.778 17.154)" fill="none" stroke="#1a1818" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.811"/><rect width="7.344" height="7.153" stroke-width="1.788" fill="none" stroke="#1a1818" stroke-linecap="round" stroke-miterlimit="10" transform="translate(121.307 26.678) rotate(-45)"/><path d="M192.834,100.733h-4.3l-5.428-5.287-9.673,9.422-12.464-12.14-12.464,12.14-9.673-9.422-5.428,5.287h-4.3" transform="translate(-34.472 -78.768)" fill="none" stroke="#1a1818" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.788"/></g></svg> */}
+                <img src={decor} alt="" className="about_decor"></img>
                 <form className="footer_form">
                     <div className="form_data">
                         <label className="form_data name">
                             Wpisz swoje imię:
-                            <input type="text" className="form_data name_input" placeholder="Imię"/>
+                            <input type="text" className="form_data name_input" onChange={e=> setNameVal(e.target.value)} style={nameBorder} placeholder="Imię"/>
+                            <p style={errStyle}>{nameErr}</p>
                         </label>
                         <label className="form_data email">
                             Wpisz swój e-mail:
-                            <input type="email" className="form_data email_input" placeholder="xyz@abc.pl"/>
+                            <input type="email" className="form_data email_input" onChange={e=> setEmailVal(e.target.value)} style={emailBorder} placeholder="xyz@abc.pl"/>
+                            <p style={errStyle}>{emailErr}</p>
                         </label>
                     </div>
                     <label className="form_text">
                         Wpisz swoją wiadomość:
-                        <textarea placeholder="Napisz swoją wiadomość."></textarea>
+                        <textarea onChange={e=> setTextVal(e.target.value)} style={textBorder} placeholder="Napisz swoją wiadomość."></textarea>
+                        <p style={errStyle}>{textErr}</p>
                     </label>
-                    <input type="submit" className="form_btn" value="Wyślij" />
+                    <input type="submit" className="form_btn" value="Wyślij" onClick={handleClick}/>
                 </form>
             </div>
             <div className="footer_bottom">
