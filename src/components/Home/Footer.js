@@ -8,28 +8,45 @@ export default function Footer() {
     const [nameVal, setNameVal] = useState("");
     const [emailVal, setEmailVal] = useState("");
     const [textVal, setTextVal] = useState(""); 
+    const [messageData, setMessageData] = useState({})
 
     const [nameBorder, setNameBorder] = useState();
     const [emailBorder, setEmailBorder] = useState();
     const [textBorder, setTextBorder] = useState();
 
     const [nameErr, setNameErr] = useState("");
-    const [emailErr, setEmailErr] = useState();
+    const [emailErr, setEmailErr] = useState("");
     const [textErr, setTextErr] = useState("");
+    const [err, setErr] = useState(false)
     const [succesMess, setSuccesMess] = useState("")
 
     useEffect(()=> {
 
-    }, []);
+        setMessageData({
+            name: nameVal,
+            email: emailVal,
+            message: textVal,
+        })
+
+        if(nameVal.length < 3 || 
+           nameVal.indexOf(" ") >= 0 ||
+           emailVal.includes("@") === false ||
+           emailVal.includes(".") === false ||
+           emailVal < 5 ||
+           textVal.length < 120
+        ){
+            setErr(true);
+        } else {
+            setErr(false);
+        }
+        
+    }, [nameVal, emailVal, textVal, err]);
 
     const handleClick = (e)=> {
         e.preventDefault();
 
-        if(nameVal.length < 3){
-            setNameErr("Podaj więcej niż 3 znaki!")
-            setNameBorder(errBorder);
-        } else if(isNaN(nameVal) === false){
-            setNameErr("To pole nie powinno zawierać cyfr!")
+        if(nameVal.length < 3 || nameVal.indexOf(" ") >= 0){
+            setNameErr("Podano złe imię!")
             setNameBorder(errBorder);
         } else {
             setNameErr("")
@@ -44,12 +61,28 @@ export default function Footer() {
             setEmailBorder();
         }
 
-        if(textVal < 120){
+        if(textVal.length < 120){
             setTextErr("Wiadomość musi zawierać conajmniej 120 znaków!")
             setTextBorder(errBorder);
         } else {
             setTextErr("");
             setTextBorder();
+        }
+
+        if((nameVal.length > 0 && emailVal.length > 0 && textVal.length > 0) && err === false){
+            fetch (`https://fer-api.coderslab.pl/v1/portfolio/contact`,
+            {
+                method: "POST",
+                headers:{
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(messageData)
+            })
+            .then(resp=> {
+                if(resp.status === 200){
+                    setSuccesMess("Wiadomość została wysłana! Wkrótce się skontaktujemy.")
+                } 
+            })
         }
     }
 
@@ -61,6 +94,7 @@ export default function Footer() {
             <div className="form_container">
                 <h1>Skontaktuj się z nami</h1>
                 <img src={decor} alt="" className="about_decor"></img>
+                <h4>{succesMess}</h4>
                 <form className="footer_form">
                     <div className="form_data">
                         <label className="form_data name">
