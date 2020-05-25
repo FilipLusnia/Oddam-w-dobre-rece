@@ -21,14 +21,15 @@ export default function WhoWeHelp() {
     }
 
     const getCurrentFundation = () => fundations?.find(fun => fun.name === current)
+
     const getPaginatedItems = () => {
-        return getCurrentFundation()?.items.sice()
+        return getCurrentFundation()?.items.slice()
     }
     
-
     return(
         <div className="section">
             <div className="section_container">
+
                 {fundations?.map(fun => (
                     <button id={fun.name} onClick={handleChangeFundation} key={fun.name}>{fun.name}</button>
                 ))}
@@ -40,6 +41,7 @@ export default function WhoWeHelp() {
                         </li>
                     ))}
                 </ul>
+
             </div>
         </div>
     )
