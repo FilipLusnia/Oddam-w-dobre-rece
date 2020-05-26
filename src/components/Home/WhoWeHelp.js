@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react';
 import firebase from 'firebase/app';
 import 'firebase/database'
 
+import decor from '../../assets/Decoration.svg';
+
 export default function WhoWeHelp() {
 
     const [fundations, setFundations] = useState(null);
@@ -51,19 +53,23 @@ export default function WhoWeHelp() {
         setPage(Number(e.target.innerHTML))
     }
     const renderPageNumbers = ()=> {
-        return pageNumbers.map(number => <li key={number} onClick={changePage}> {number} </li>)
+        return pageNumbers.map(number => <li key={number} onClick={changePage} className="fundations_pages_item"> {number} </li>)
     };
     
 
     return(
-        <div className="section">
-            <div className="section_container">
-                {fundations?.map(e => (
-                    <button onClick={handleChangeFundation} key={e.name}>{e.name}</button>
-                ))}
-                <p> {choosenObject()?.desc} </p>
-                <ul> {showPaginatedItems()} </ul>
-                <ul> {renderPageNumbers()} </ul>     
+        <div className="fundations">
+            <div className="fundations_container">
+                <h1>Komu pomagamy?</h1>
+                <img src={decor} alt="" className="about_decor"></img>
+                <div className="fundations_btns">
+                    {fundations?.map(e => (
+                        <button className="fundations_btns_btn" onClick={handleChangeFundation} key={e.name}>{e.name}</button>
+                    ))}
+                </div>
+                <p className="fundations_desc" > {choosenObject()?.desc} </p>
+                <ul className="fundations_items" > {showPaginatedItems()} </ul>
+                <ul className="fundations_pages" > {renderPageNumbers()} </ul>     
             </div>
         </div>
     )

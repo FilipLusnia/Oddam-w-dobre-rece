@@ -1,11 +1,52 @@
-.section{
+.fundations{
     display: flex;
     justify-content: center;
+    align-items: center;
+    color: $color_4;
 }
 
-.section_container{
+.fundations_container{
     height: 600px;
     border: 1px solid black;
     width: 70vw;
     margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1{
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    img{
+        height: 27px;
+    }
+    
+}
+
+.fundations_btns{
+    display: flex;
+    justify-content: center;
+}
+
+.fundations_btns_btn{
+    font-family: $font-base;
+}
+
+.fundations_desc{
+    text-align: center;
+}
+
+.fundations_items{
+
+}
+
+.fundations_pages{
+    display: flex;
+}
+
+.fundations_pages_item{
+    border: 1px solid black;
+    cursor: pointer;
 }
