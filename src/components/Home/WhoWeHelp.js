@@ -5,43 +5,65 @@ import 'firebase/database'
 export default function WhoWeHelp() {
 
     const [fundations, setFundations] = useState(null);
-    const [current , setCurrent] = useState("Fundacjom")
 
-    let x = [];
+    const [currentName, setCurrentName] = useState("Fundacjom")
+
+    const [page, setPage] = useState(1)
+    const [itemsPerPage, setItemsPerPage] = useState(3)
+
     useEffect(() => {
-        const fun = firebase.database().ref().child('fundations');
-        fun.on('value', snap => {
+        const fund = firebase.database().ref().child('fundations');
+        fund.on('value', snap => {
           setFundations(snap.val())
         })
     }, [])
 
+    //content display logic
+
     const handleChangeFundation = (e) => {
-        const { id } = e.target;
-        setCurrent(id)
+        setCurrentName(e.target.innerHTML)
+        setPage(1);
     }
 
-    const getCurrentFundation = () => fundations?.find(fun => fun.name === current)
+    const choosenObject = () => fundations?.find(obj => obj.name === currentName)
 
-    const getPaginatedItems = () => {
-        return getCurrentFundation()?.items.slice()
+    const showPaginatedItems = () => {
+        const indexOfLastItemOnPage = page * itemsPerPage;
+        const indexOfFirstItemOnPage = indexOfLastItemOnPage - itemsPerPage;
+        const currentPage = choosenObject()?.items.slice(indexOfFirstItemOnPage, indexOfLastItemOnPage);
+
+        return currentPage?.map((item, index) => (
+            <li key={index}>
+                {item.header}
+                {item.subheader}
+                {item.desc}
+            </li>)
+        )
     }
+
+    //pagination logic
+
+    const pageNumbers = [];
+    for (let i = 1; i <= Math.ceil(choosenObject()?.items.length / itemsPerPage); i++) {
+        pageNumbers.push(i);
+    }
+    const changePage = (e) => {
+        setPage(Number(e.target.innerHTML))
+    }
+    const renderPageNumbers = ()=> {
+        return pageNumbers.map(number => <li key={number} onClick={changePage}> {number} </li>)
+    };
     
+
     return(
         <div className="section">
             <div className="section_container">
-
-                {fundations?.map(fun => (
-                    <button id={fun.name} onClick={handleChangeFundation} key={fun.name}>{fun.name}</button>
+                {fundations?.map(e => (
+                    <button onClick={handleChangeFundation} key={e.name}>{e.name}</button>
                 ))}
-                <p>{getCurrentFundation()?.desc}</p>
-                <ul>
-                    {getCurrentFundation()?.items?.map(item => (
-                        <li key={item.header}>
-                            {item.header}
-                        </li>
-                    ))}
-                </ul>
-
+                <p> {choosenObject()?.desc} </p>
+                <ul> {showPaginatedItems()} </ul>
+                <ul> {renderPageNumbers()} </ul>     
             </div>
         </div>
     )
