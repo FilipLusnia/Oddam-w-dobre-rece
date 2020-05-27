@@ -32,6 +32,7 @@
 
 .fundations_btns_btn{
     font-family: $font-base;
+    outline: none;
 }
 
 .fundations_desc{
@@ -47,6 +48,5 @@
 }
 
 .fundations_pages_item{
-    border: 1px solid black;
     cursor: pointer;
 }

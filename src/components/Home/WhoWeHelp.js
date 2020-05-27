@@ -53,9 +53,20 @@ export default function WhoWeHelp() {
         setPage(Number(e.target.innerHTML))
     }
     const renderPageNumbers = ()=> {
-        return pageNumbers.map(number => <li key={number} onClick={changePage} className="fundations_pages_item"> {number} </li>)
+        return pageNumbers.map(number => 
+        <li key={number} 
+            onClick={changePage} 
+            className="fundations_pages_item"
+            style={number === page ? {border: "1px solid red"} : {border: "none"}}> 
+                {number} 
+        </li>)
     };
     
+
+    const changeStyle = (e) => {
+        e.target.style.border = "1px solid red";
+
+    }
 
     return(
         <div className="fundations">
@@ -64,12 +75,19 @@ export default function WhoWeHelp() {
                 <img src={decor} alt="" className="about_decor"></img>
                 <div className="fundations_btns">
                     {fundations?.map(e => (
-                        <button className="fundations_btns_btn" onClick={handleChangeFundation} key={e.name}>{e.name}</button>
+                        <button className="fundations_btns_btn" 
+                                onClick={handleChangeFundation} 
+                                key={e.name}
+                                style={e.name === currentName ? 
+                                    {border: "1px solid red"} : 
+                                    {border: "none"}}>
+                            {e.name}
+                        </button>
                     ))}
                 </div>
-                <p className="fundations_desc" > {choosenObject()?.desc} </p>
-                <ul className="fundations_items" > {showPaginatedItems()} </ul>
-                <ul className="fundations_pages" > {renderPageNumbers()} </ul>     
+                <p className="fundations_desc"> {choosenObject()?.desc} </p>
+                <ul className="fundations_items"> {showPaginatedItems()} </ul>
+                <ul className="fundations_pages" onClick={changeStyle}> {renderPageNumbers()} </ul>     
             </div>
         </div>
     )
