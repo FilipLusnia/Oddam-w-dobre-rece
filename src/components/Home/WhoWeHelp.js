@@ -35,10 +35,15 @@ export default function WhoWeHelp() {
         const currentPage = choosenObject()?.items.slice(indexOfFirstItemOnPage, indexOfLastItemOnPage);
 
         return currentPage?.map((item, index) => (
-            <li key={index}>
-                {item.header}
-                {item.subheader}
-                {item.desc}
+            <li key={index}
+                className="fundations_item">
+                <div className="fundations_item_container">
+                    <div className="fundations_item_container_headers">
+                        <h1>{item.header}</h1>
+                        <h4>{item.subheader}</h4>
+                    </div>
+                <p>{item.desc}</p>
+                </div>
             </li>)
         )
     }
@@ -57,37 +62,40 @@ export default function WhoWeHelp() {
         <li key={number} 
             onClick={changePage} 
             className="fundations_pages_item"
-            style={number === page ? {border: "1px solid red"} : {border: "none"}}> 
+            style={number === page ? null : {border: "none"}}> 
                 {number} 
         </li>)
     };
     
 
-    const changeStyle = (e) => {
-        e.target.style.border = "1px solid red";
-
-    }
-
     return(
         <div className="fundations">
             <div className="fundations_container">
-                <h1>Komu pomagamy?</h1>
-                <img src={decor} alt="" className="about_decor"></img>
-                <div className="fundations_btns">
-                    {fundations?.map(e => (
-                        <button className="fundations_btns_btn" 
-                                onClick={handleChangeFundation} 
-                                key={e.name}
-                                style={e.name === currentName ? 
-                                    {border: "1px solid red"} : 
-                                    {border: "none"}}>
-                            {e.name}
-                        </button>
-                    ))}
-                </div>
-                <p className="fundations_desc"> {choosenObject()?.desc} </p>
-                <ul className="fundations_items"> {showPaginatedItems()} </ul>
-                <ul className="fundations_pages" onClick={changeStyle}> {renderPageNumbers()} </ul>     
+                {fundations ?
+                    <>
+                        <h1>Komu pomagamy?</h1>
+                        <img src={decor} alt="" className="about_decor"></img>
+                        <div className="fundations_btns">
+                            {fundations?.map(e => (
+                                <button className="fundations_btns_btn" 
+                                        onClick={handleChangeFundation} 
+                                        key={e.name}
+                                        style={e.name === currentName ? null : {border: "none"}}>
+                                    {e.name}
+                                </button>
+                            ))}
+                        </div>
+                        <p className="fundations_desc"> {choosenObject()?.desc} </p>
+                        <ul className="fundations_items"> {showPaginatedItems()} </ul>
+                        <ul className="fundations_pages"> {renderPageNumbers()} </ul> 
+                    </> 
+                :
+                    <>            
+                        <h1>Komu pomagamy?</h1>
+                        <img src={decor} alt="" className="about_decor"></img>
+                        <h1>Ładowanie...</h1>    
+                    </>
+                }   
             </div>
         </div>
     )

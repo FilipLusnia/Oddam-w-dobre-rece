@@ -2,12 +2,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: $color_4;
+    color: $color_5;
 }
 
 .fundations_container{
     height: 600px;
-    border: 1px solid black;
     width: 70vw;
     margin-top: 60px;
     display: flex;
@@ -15,12 +14,13 @@
     align-items: center;
 
     h1{
-        font-size: 30px;
+        font-size: 24px;
         margin-bottom: 20px;
     }
 
     img{
         height: 27px;
+        margin-bottom: 35px;
     }
     
 }
@@ -28,25 +28,71 @@
 .fundations_btns{
     display: flex;
     justify-content: center;
+    margin-bottom: 60px;
 }
 
 .fundations_btns_btn{
     font-family: $font-base;
     outline: none;
+    height: 65px;
+    width: 175px;
+    font-size: 20px;
+    background: none;
+    color: $color_5;
+    border: 1px solid rgba(60, 60, 60, 0.842);
+    margin: 0 40px;
+    cursor: pointer;
+    line-height: 21px;
 }
 
 .fundations_desc{
     text-align: center;
+    width: 540px;
+    margin-bottom: 30px;
+    line-height: 20px;
 }
 
-.fundations_items{
+.fundations_item{
+    border-bottom: 1px solid rgba(112, 112, 112, 0.493);
+    height: 80px;
+    width: 1044px;
+    display: flex;
+    align-items: center;
+}
 
+.fundations_item:last-child{
+    border-bottom: none;
+}
+
+.fundations_item_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 13px;
+    box-sizing: border-box;
+    padding-right: 15px;
+}
+
+.fundations_item_container_headers{
+    display: flex;
+    flex-direction: column;
+
+    h1{ 
+        font-size: 21px;
+        margin-bottom: 5px;
+    }
 }
 
 .fundations_pages{
     display: flex;
+    margin-top: 20px;
 }
 
 .fundations_pages_item{
+    border: 1px solid rgba(112, 112, 112, 0.801);
     cursor: pointer;
+    font-size: 13px;
+    margin: 0 15px;
+    padding: 10px;
 }
