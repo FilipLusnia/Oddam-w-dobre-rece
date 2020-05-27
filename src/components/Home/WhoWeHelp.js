@@ -62,7 +62,7 @@ export default function WhoWeHelp() {
         <li key={number} 
             onClick={changePage} 
             className="fundations_pages_item"
-            style={number === page ? null : {border: "none"}}> 
+            style={number === page ? {padding: "9px"} : {border: "none"}}> 
                 {number} 
         </li>)
     };
