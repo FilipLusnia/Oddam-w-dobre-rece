@@ -43,6 +43,12 @@
     margin: 0 40px;
     cursor: pointer;
     line-height: 21px;
+    transition: 0.3s;
+}
+
+.fundations_btns_btn:hover{
+    color: rgb(161, 161, 127);
+    transition: 0.3s;
 }
 
 .fundations_desc{
@@ -98,4 +104,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: 0.2s;
+}
+
+.fundations_pages_item:hover{
+    color: rgb(192, 192, 143);
+    transition: 0.2s;
 }
