@@ -1,5 +1,6 @@
-import React, {useState, useEffect} from 'react';
-import firebase from 'firebase'
+import React, {useState, useEffect, useContext} from 'react';
+import {FirebaseContext} from "../Firebase/FirebaseIndex"
+import firebase from "firebase"
 
 import decor from '../../assets/Decoration.svg';
 

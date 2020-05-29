@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import {
     Link
 } from "react-router-dom";
@@ -10,7 +10,6 @@ import decor from '../assets/Decoration.svg';
 
 
 export default function Login() {
-
     const [emailVal, setEmailVal] = useState("");
     const [passwordVal, setPasswordVal] = useState("");
 

@@ -1,13 +1,13 @@
 import firebase from 'firebase/app';
 
 const config = {
-  apiKey: "AIzaSyD2KJeXAddNRoWeIXaYyupi3_g5U4MnizY",
-  authDomain: "owdr-82da9.firebaseapp.com",
-  databaseURL: "https://owdr-82da9.firebaseio.com",
-  projectId: "owdr-82da9",
-  storageBucket: "owdr-82da9.appspot.com",
-  messagingSenderId: "153906792365",
-  appId: "1:153906792365:web:28f3237522c1edc02dc324"
+  apiKey: process.env.REACT_APP_apiKey,
+  authDomain: REACT_APP_authDomain,
+  databaseURL: REACT_APP_databaseURL,
+  projectId: REACT_APP_projectId,
+  storageBucket: REACT_APP_storageBucket,
+  messagingSenderId: REACT_APP_messagingSenderId,
+  appId: REACT_APP_appId
 };
 
 export default function FirebaseCreds () {
