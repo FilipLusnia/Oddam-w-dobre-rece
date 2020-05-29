@@ -1,4 +1,6 @@
 import firebase from 'firebase/app';
+import 'firebase/auth';
+import 'firebase/database'
 
 const config = {
   apiKey: process.env.REACT_APP_apiKey,
@@ -14,6 +16,9 @@ export default class Firebase{
     constructor(){
       firebase.initializeApp(config)
 
-      this.auth = firebase.auth();
+      this.fbauth = firebase.auth();
+      
+      this.fbdatabase = firebase.database();
     }
 }
+

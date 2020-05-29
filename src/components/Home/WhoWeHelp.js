@@ -1,6 +1,5 @@
 import React, {useState, useEffect, useContext} from 'react';
 import {FirebaseContext} from "../Firebase/FirebaseIndex"
-import firebase from "firebase"
 
 import decor from '../../assets/Decoration.svg';
 
@@ -13,12 +12,14 @@ export default function WhoWeHelp() {
     const [page, setPage] = useState(1)
     const itemsPerPage = 3;
 
+    const {fbdatabase} = useContext(FirebaseContext);
+
     useEffect(() => {
-        const fund = firebase.database().ref().child('fundations');
+        const fund = fbdatabase.ref().child('fundations');
         fund.on('value', snap => {
           setFundations(snap.val())
         })
-    }, [])
+    }, [fbdatabase])
 
     //content display logic
 
