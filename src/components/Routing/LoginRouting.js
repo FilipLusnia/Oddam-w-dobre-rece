@@ -6,8 +6,8 @@ import {
 export default function LoginRouting() {
   return (
       <div>
-          <Link to="/logowanie" className="header-top text">Zaloguj</Link>
-          <Link to="/rejestracja" className="header-top text-register">Załóż konto</Link>
+          <Link to="/logowanie" className="login_text">Zaloguj</Link>
+          <Link to="/rejestracja" className="register_text">Załóż konto</Link>
       </div>
   )
 }
