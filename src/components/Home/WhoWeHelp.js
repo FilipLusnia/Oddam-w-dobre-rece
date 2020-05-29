@@ -14,6 +14,9 @@ export default function WhoWeHelp() {
 
     const {fbdatabase} = useContext(FirebaseContext);
 
+    const {shoutInLog} = useContext(FirebaseContext);
+    shoutInLog("test")
+
     useEffect(() => {
         const fund = fbdatabase.ref().child('fundations');
         fund.on('value', snap => {

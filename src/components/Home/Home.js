@@ -21,11 +21,11 @@ export default function Home() {
                     <LoginRouting/>
                 </div>
                 <div className="header-bottom">
-                    <Link className="start-button" to="Main" offset={100} smooth={true} duration={500} delay={80}>Start</Link>
-                    <Link className="nav-button" to="SimpleSteps" smooth={true} duration={500} delay={80}>O co chodzi?</Link>
-                    <Link className="nav-button" to="About" smooth={true} duration={600} delay={80}>O nas</Link>
-                    <Link className="nav-button" to="WhoWeHelp" smooth={true} duration={700} delay={80}>Fundacja i organizacje</Link>
-                    <Link className="nav-button" to="Footer" smooth={true} duration={800} delay={80}>Kontakt</Link>
+                    <Link className="start-button" to="Main" offset={100} smooth={true} duration={500} delay={60}>Start</Link>
+                    <Link className="nav-button" to="SimpleSteps" smooth={true} duration={500} delay={60}>O co chodzi?</Link>
+                    <Link className="nav-button" to="About" smooth={true} duration={600} delay={60}>O nas</Link>
+                    <Link className="nav-button" to="WhoWeHelp" smooth={true} duration={700} delay={60}>Fundacja i organizacje</Link>
+                    <Link className="nav-button" to="Footer" smooth={true} duration={800} delay={60}>Kontakt</Link>
                 </div>
             </div>
             

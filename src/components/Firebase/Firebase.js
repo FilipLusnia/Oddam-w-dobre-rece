@@ -20,5 +20,9 @@ export default class Firebase{
       
       this.fbdatabase = firebase.database();
     }
+
+    shoutInLog = e =>{
+      console.log("Firebase shouted: " + e);
+    }
 }
 
