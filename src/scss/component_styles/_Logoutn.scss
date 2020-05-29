@@ -1,0 +1,28 @@
+.logout_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.logout_info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 200px;
+    width: 450px;
+    text-align: center;
+    line-height: 40px;
+
+    h1{
+        font-size: 30px;
+        color: $color_5;
+        margin-bottom: 20px;
+    }
+
+    img{
+        height: 25px;
+        margin-bottom: 30px;
+    }
+}

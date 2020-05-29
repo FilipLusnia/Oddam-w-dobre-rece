@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import {
     Link
 } from "react-router-dom";
@@ -43,33 +43,37 @@ export default function Login() {
     }
 
     return (
-        <>
-            <div>
+        <div>
+            <div className="header">
                 <LoginRouting/>
-                <HomeButton/>
-                login
+                <div className="login_home_btn_container">
+                    <HomeButton/>
+                </div>
             </div>
-
-            <div className="">
-                <h1>Zaloguj się</h1>
-                <img src={decor} alt="" className="login_decor"></img>
-                <form className="">
-                    <div className="">
-                        <label className="">
-                            Email:
-                            <input type="email" className="" onChange={e=> setEmailVal(e.target.value)} style={emailBorder}/>
-                            <p style={errStyle}>{emailErr}</p>
-                        </label>
-                        <label className="">
-                            Hasło:
-                            <input type="text" className="" onChange={e=> setPasswordVal(e.target.value)} style={passwordBorder}/>
-                            <p style={errStyle}>{passwordErr}</p>
-                        </label>
-                    </div>
-                    <Link to="/rejestracja" className="">Załóż konto</Link>
-                    <input type="submit" className="" value="Zaloguj" onClick={handleClick}/>
-                </form>
+            <div className="login_section">
+                <div className="login_container">
+                    <h1>Zaloguj się</h1>
+                    <img src={decor} alt="" className="login_decor"></img>
+                    <form className="login_form">
+                        <div className="login_form_container">
+                            <label className="login_email">
+                                Email:
+                                <input type="email" className="login_email_input" onChange={e=> setEmailVal(e.target.value)} style={emailBorder}/>
+                                <p style={errStyle}>{emailErr}</p>
+                            </label>
+                            <label className="login_password">
+                                Hasło:
+                                <input type="text" className="login_password_input" onChange={e=> setPasswordVal(e.target.value)} style={passwordBorder}/>
+                                <p style={errStyle}>{passwordErr}</p>
+                            </label>
+                        </div>
+                        <div className="login_buttons">
+                            <Link to="/rejestracja" className="login_form_switch">Załóż konto</Link>
+                            <input type="submit" className="login_btn" value="Zaloguj się" onClick={handleClick}/>
+                        </div>
+                    </form>
+                </div>
             </div>
-        </>
+        </div>
     );
 }

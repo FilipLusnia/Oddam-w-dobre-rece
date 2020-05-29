@@ -10,7 +10,7 @@ export default function WhoWeHelp() {
     const [currentName, setCurrentName] = useState("Fundacjom")
 
     const [page, setPage] = useState(1)
-    const [itemsPerPage, setItemsPerPage] = useState(3)
+    const itemsPerPage = 3;
 
     useEffect(() => {
         const fund = firebase.database().ref().child('fundations');

@@ -13,6 +13,10 @@
 @import "component_styles/routing/LoginRouting";
 @import "component_styles/routing/HomeButton";
 
+@import "component_styles/Login";
+@import "component_styles/Register";
+@import "component_styles/Logoutn";
+
 body {
     font-family: $font-base;
     overflow-x: hidden;

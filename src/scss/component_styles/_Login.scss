@@ -1,0 +1,103 @@
+.login_home_btn_container{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.login_section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.login_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $color_5;
+
+    h1{
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    img{
+        height: 25px;
+        margin-bottom: 40px;
+    }
+}
+
+.login_form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login_form_container{
+    background-color: $color_1;
+    width: 300px;
+    height: 215px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 600;
+}
+
+.login_email{
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    width: 200px;
+    min-height: 64px;
+    margin-top: 35px;
+}
+.login_email_input{
+    border: none;
+    border-bottom: 1px solid $color_4;
+    background: none;
+    outline: none;
+    min-height: 30px;
+    font-family: $font-base;
+    margin-bottom: 5px;
+}
+.login_password{
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    width: 200px;
+    margin-top: 15px;
+    min-height: 90px;
+}
+.login_password_input{
+    border: none;
+    border-bottom: 1px solid $color_4;
+    background: none;
+    outline: none;
+    min-height: 30px;
+    font-family: $font-base;
+    margin-bottom: 5px;
+}
+
+.login_buttons{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 390px;
+}
+
+.login_form_switch{
+    text-decoration: none;
+    color: $color_4;
+}
+
+.login_btn{
+    color: $color_4;
+    border: 1px solid $color_4;
+    padding: 12px;
+    background: none;
+    cursor: pointer;
+    outline: none;
+}

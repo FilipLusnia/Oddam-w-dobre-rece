@@ -6,8 +6,8 @@ import {
 export default function HomeButton() {
   return (
 
-        <div className="home-btn">
-            <Link to="/">Strona Główna</Link>
+        <div className="home_btn_container">
+            <Link to="/" className="home_btn">Strona Główna</Link>
         </div>
  
   )

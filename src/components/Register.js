@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import {
     Link
 } from "react-router-dom";
@@ -55,36 +55,40 @@ export default function Register() {
 
     return (
         <>
-            <div>
+            <div className="header">
                 <LoginRouting/>
-                <HomeButton/>
-                login
+                <div className="register_home_btn_container">
+                    <HomeButton/>
+                </div>
             </div>
-
-            <div className="">
-                <h1>Zaloguj się</h1>
-                <img src={decor} alt="" className="login_decor"></img>
-                <form className="">
-                    <div className="">
-                        <label className="">
-                            Email:
-                            <input type="email" className="" onChange={e=> setEmailVal(e.target.value)} style={emailBorder}/>
-                            <p style={errStyle}>{emailErr}</p>
-                        </label>
-                        <label className="">
-                            Hasło:
-                            <input type="text" className="" onChange={e=> setPasswordVal(e.target.value)} style={passwordBorder}/>
-                            <p style={errStyle}>{passwordErr}</p>
-                        </label>
-                        <label className="">
-                            Powtórz hasło:
-                            <input type="text" className="" onChange={e=> setPassword2Val(e.target.value)} style={password2Border}/>
-                            <p style={errStyle}>{password2Err}</p>
-                        </label>
-                    </div>
-                    <Link to="/logowanie" className="">Zaloguj</Link>
-                    <input type="submit" className="" value="Załóż konto" onClick={handleClick}/>
-                </form>
+            <div className="register_section">
+                <div className="register_container">
+                    <h1>Załóż konto</h1>
+                    <img src={decor} alt="" className="register_decor"></img>
+                    <form className="register_form">
+                        <div className="register_form_container">
+                            <label className="register_email">
+                                Email:
+                                <input type="email" className="register_email_input" onChange={e=> setEmailVal(e.target.value)} style={emailBorder}/>
+                                <p style={errStyle}>{emailErr}</p>
+                            </label>
+                            <label className="register_password">
+                                Hasło:
+                                <input type="text" className="register_password_input" onChange={e=> setPasswordVal(e.target.value)} style={passwordBorder}/>
+                                <p style={errStyle}>{passwordErr}</p>
+                            </label>
+                            <label className="register_password2">
+                                Powtórz hasło:
+                                <input type="text" className="register_password2_input" onChange={e=> setPassword2Val(e.target.value)} style={password2Border}/>
+                                <p style={errStyle}>{password2Err}</p>
+                            </label>
+                        </div>
+                        <div className="register_buttons">
+                            <Link to="/logowanie" className="register_form_switch">Zaloguj</Link>
+                            <input type="submit" className="register_btn" value="Załóż konto" onClick={handleClick}/>
+                        </div>
+                    </form>
+                </div>
             </div>
         </>
     );
