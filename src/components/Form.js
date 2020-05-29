@@ -9,5 +9,5 @@ export default function Form() {
             <HomeButton/>
             form
         </div>
-    );
+    )
 }

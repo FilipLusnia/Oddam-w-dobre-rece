@@ -10,6 +10,10 @@ const config = {
   appId: process.env.REACT_APP_appId
 };
 
-export default function FirebaseCreds () {
-    firebase.initializeApp(config)
+export default class Firebase{
+    constructor(){
+      firebase.initializeApp(config)
+
+      this.auth = firebase.auth();
+    }
 }
