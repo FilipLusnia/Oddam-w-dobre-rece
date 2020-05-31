@@ -13,16 +13,20 @@ const config = {
 };
 
 export default class Firebase{
-    constructor(){
-      firebase.initializeApp(config)
 
-      this.fbauth = firebase.auth();
-      
-      this.fbdatabase = firebase.database();
-    }
+  constructor(){
+    firebase.initializeApp(config)
 
-    shoutInLog = e =>{
-      console.log("Firebase shouted: " + e);
-    }
+    this.fbauth = firebase.auth();
+    this.fbdatabase = firebase.database();
+  }
+
+  signUpWithEmailAndPass = (email, password) =>
+    this.fbauth.createUserWithEmailAndPassword(email, password);
+
+  signInWithEmailAndPass = (email, password) =>
+    this.fbauth.signInWithEmailAndPassword(email, password);
+
+  doSignOut = () => this.auth.signOut();
 }
 

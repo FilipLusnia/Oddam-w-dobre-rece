@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -14,13 +14,24 @@ import Logoutn from './Logoutn';
 import '../scss/main.scss';
 
 export default function App() {
+
+  const [registeredMess, setRegisteredMess] = useState("");
+
+  const isRegisteredMess = (e) => {
+    setRegisteredMess(e);
+  }
+
   return (
 
     <Router>
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/logowanie" component={Login} />
-        <Route exact path="/rejestracja" component={Register} />
+        <Route exact path="/logowanie" 
+          render={(props) => <Login {...props} registeredMess={registeredMess} />}
+        />
+        <Route exact path="/rejestracja" 
+          render={(props) => <Register {...props} isRegisteredMess={isRegisteredMess} />}
+        />
         <Route exact path="/oddaj-rzeczy" component={Form} />
         <Route exact path="/wylogowano" component={Logoutn} />
       </Switch>

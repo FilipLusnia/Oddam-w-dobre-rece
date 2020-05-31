@@ -1,7 +1,9 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import {
-    Link
+    Link,
+    useHistory
 } from "react-router-dom";
+import {FirebaseContext} from "./Firebase/FirebaseIndex"
 
 import LoginRouting from "./Routing/LoginRouting"
 import HomeButton from "./Routing/HomeButton"
@@ -9,7 +11,10 @@ import HomeButton from "./Routing/HomeButton"
 import decor from '../assets/Decoration.svg';
 
 
-export default function Register() {
+export default function Register({isRegisteredMess}) {
+
+    const {signUpWithEmailAndPass} = useContext(FirebaseContext);
+    const customHistory = useHistory();
 
     const [emailVal, setEmailVal] = useState("");
     const [passwordVal, setPasswordVal] = useState("");
@@ -18,12 +23,27 @@ export default function Register() {
     const [emailErr, setEmailErr] = useState("");
     const [passwordErr, setPasswordErr] = useState("");
     const [password2Err, setPassword2Err] = useState("");
+    const [err, setErr] = useState(false);
+
     const [emailBorder, setEmailBorder] = useState();
     const [passwordBorder, setPasswordBorder] = useState();
     const [password2Border, setPassword2Border] = useState();
-
     const errStyle = {color: "red"};
     const errBorder = {borderColor: "red"};
+
+    useEffect(()=> {
+
+        if(emailVal.indexOf("@") === -1 ||
+        emailVal.indexOf(".") === -1 ||
+        passwordVal.length < 6 ||
+        password2Val !== passwordVal
+        ){
+            setErr(true);
+        } else {
+            setErr(false);
+        } 
+
+    }, [emailVal, passwordVal, password2Val, err]);
 
     const handleClick = (e)=> {
         e.preventDefault();
@@ -50,6 +70,28 @@ export default function Register() {
         } else {
             setPassword2Err("");
             setPassword2Border();
+        }
+
+        if((emailVal.length > 0 && 
+            passwordVal.length > 0 && 
+            password2Val.length > 0) && 
+            err === false){
+            
+            signUpWithEmailAndPass(emailVal, passwordVal)
+            .then(resp => {
+                if(resp){
+                    customHistory.push("/logowanie");
+                    isRegisteredMess("Zarejestrowałeś się pomyślnie. Teraz możesz się zalogować.");
+                }
+            })
+            .catch(e => {
+                if(e.message === "The email address is already in use by another account."){
+                    setEmailErr("Konto z takim emailem już istnieje!")
+                    console.log(e);
+                } else {
+                    setEmailErr(e.message)
+                }
+            })  
         }
     }
 

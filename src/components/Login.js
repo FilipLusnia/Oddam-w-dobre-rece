@@ -1,7 +1,9 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import {
-    Link
+    Link,
+    useHistory
 } from "react-router-dom";
+import {FirebaseContext} from "./Firebase/FirebaseIndex"
 
 import LoginRouting from "./Routing/LoginRouting"
 import HomeButton from "./Routing/HomeButton"
@@ -9,17 +11,41 @@ import HomeButton from "./Routing/HomeButton"
 import decor from '../assets/Decoration.svg';
 
 
-export default function Login() {
+export default function Login({registeredMess}) {
+
+    const {signInWithEmailAndPass} = useContext(FirebaseContext);
+    const customHistory = useHistory();
+
     const [emailVal, setEmailVal] = useState("");
     const [passwordVal, setPasswordVal] = useState("");
 
     const [emailErr, setEmailErr] = useState("");
     const [passwordErr, setPasswordErr] = useState("");
+    const [err, setErr] = useState(false);
     const [emailBorder, setEmailBorder] = useState();
     const [passwordBorder, setPasswordBorder] = useState();
 
+    const [showRegisteredMess, setShowRegisteredMess] = useState("");
+
     const errStyle = {color: "red"};
     const errBorder = {borderColor: "red"};
+
+    useEffect(()=> {
+        setShowRegisteredMess(registeredMess);
+    }, [registeredMess]);
+
+    useEffect(()=> {
+
+        if(emailVal.indexOf("@") === -1 ||
+        emailVal.indexOf(".") === -1 ||
+        passwordVal.length < 6
+        ){
+            setErr(true);
+        } else {
+            setErr(false);
+        } 
+
+    }, [emailVal, passwordVal, err]);
 
     const handleClick = (e)=> {
         e.preventDefault();
@@ -39,6 +65,28 @@ export default function Login() {
             setPasswordErr("");
             setPasswordBorder();
         }
+
+        if((emailVal.length > 0 && 
+            passwordVal.length > 0) && 
+            err === false){
+            
+            signInWithEmailAndPass(emailVal, passwordVal)
+            .then(resp => {
+                if(resp){
+                    setShowRegisteredMess("")
+                    customHistory.push("/");
+                }
+            })
+            .catch(e => {
+                if(e.message === "There is no user record corresponding to this identifier. The user may have been deleted."){
+                    setEmailErr("Konto z tym emailem nie istnieje.");
+                    setEmailBorder(errBorder);
+                } else if(e.message === "The password is invalid or the user does not have a password."){
+                    setPasswordErr("Błędne hasło.");
+                    setPasswordBorder(errBorder);
+                } 
+            })  
+        }
     }
 
     return (
@@ -53,6 +101,7 @@ export default function Login() {
                 <div className="login_container">
                     <h1>Zaloguj się</h1>
                     <img src={decor} alt="" className="login_decor"></img>
+                    <p>{showRegisteredMess}</p>
                     <form className="login_form">
                         <div className="login_form_container">
                             <label className="login_email">
