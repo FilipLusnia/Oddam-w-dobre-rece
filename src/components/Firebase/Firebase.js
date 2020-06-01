@@ -21,12 +21,17 @@ export default class Firebase{
     this.fbdatabase = firebase.database();
   }
 
+  get currUser() {
+    return this.fbauth.currentUser
+  }
+
   signUpWithEmailAndPass = (email, password) =>
     this.fbauth.createUserWithEmailAndPassword(email, password);
 
   signInWithEmailAndPass = (email, password) =>
     this.fbauth.signInWithEmailAndPassword(email, password);
 
-  doSignOut = () => this.auth.signOut();
+  signOut = () => 
+    this.fbauth.signOut();
 }
 

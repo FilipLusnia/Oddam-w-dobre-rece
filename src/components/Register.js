@@ -13,7 +13,7 @@ import decor from '../assets/Decoration.svg';
 
 export default function Register({isRegisteredMess}) {
 
-    const {signUpWithEmailAndPass} = useContext(FirebaseContext);
+    const {signUpWithEmailAndPass, signOut} = useContext(FirebaseContext);
     const customHistory = useHistory();
 
     const [emailVal, setEmailVal] = useState("");
@@ -80,6 +80,7 @@ export default function Register({isRegisteredMess}) {
             signUpWithEmailAndPass(emailVal, passwordVal)
             .then(resp => {
                 if(resp){
+                    signOut();
                     customHistory.push("/logowanie");
                     isRegisteredMess("Zarejestrowałeś się pomyślnie. Teraz możesz się zalogować.");
                 }

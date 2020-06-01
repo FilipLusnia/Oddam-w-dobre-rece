@@ -13,6 +13,7 @@ import Logoutn from './Logoutn';
 
 import '../scss/main.scss';
 
+
 export default function App() {
 
   const [registeredMess, setRegisteredMess] = useState("");
@@ -22,7 +23,6 @@ export default function App() {
   }
 
   return (
-
     <Router>
       <Switch>
         <Route exact path="/" component={Home} />
