@@ -1,4 +1,4 @@
-import React, {useState, useContext, useEffect} from 'react';
+import React, {useContext} from 'react';
 import {
     Link,
     useHistory
@@ -6,8 +6,6 @@ import {
 import {FirebaseContext} from "../Firebase/FirebaseIndex"
 
 export default function LoginRouting() {
-  
-  const [authUser, setAuthUser] = useState();
 
   const customHistory = useHistory();
 
@@ -18,11 +16,6 @@ export default function LoginRouting() {
     window.location.reload();
     customHistory.push("/");
   }
-
-  useEffect(() => {
-    setAuthUser(currUser)
-    console.log(currUser);
-  },[currUser]) 
 
   if (currUser !== null){
     return(
