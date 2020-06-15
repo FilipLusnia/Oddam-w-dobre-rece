@@ -1,0 +1,67 @@
+.form_main{
+    height: 863px;
+    min-width: 90vw;
+    display: flex;
+    align-items: center;
+
+    p{
+        font-weight: 300;
+        margin-bottom: 45px;
+    }
+}
+.form_main_img{
+    background-image: url(../../../assets/Form-Hero-Image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    left: 0;
+    width: 60%;
+    height: 100%;
+}
+.form_main_title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 30px;
+    line-height: 40px;
+    color: $color_5;
+    transform: translate(-80px, -40px);
+}
+.form_title_decor{
+    background-image: url(../../../assets/Decoration.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 183px;
+    height: 33px;
+    margin: 20px 0 10px;
+}
+.form_title_squares{
+    display: flex;
+}
+
+.form_title_square{
+    border: 1px solid #737373;
+    width: 120px;
+    height: 120px;
+    transform: rotate(45deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+
+    h2{
+        transform:  translate(-40px, -7px) rotate(-45deg);
+        font-weight: 300;
+        font-size: 28px;
+        margin-bottom: 25px;
+    }
+
+    h3{
+        transform: translate(10px, -23px) rotate(-45deg);
+        font-weight: 300;
+        font-size: 22px;
+        line-height: 22px;
+    }
+}
