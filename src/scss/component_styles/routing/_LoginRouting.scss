@@ -35,3 +35,15 @@
     cursor: pointer;
     outline: none;
 }
+
+.logout_form{
+    color: $color_4;
+    margin-left: 15px;
+    font-family: $font-base;
+    background: none;
+    border: 1px solid #FAD648;
+    padding: 7px 10px;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+}

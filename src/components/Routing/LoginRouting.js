@@ -21,6 +21,7 @@ export default function LoginRouting() {
     return(
       <div className="logout_nav">
         <p>Zalogowano jako: <span>{currUser?.email}</span></p>
+        <Link to="/oddaj-rzeczy" className="logout_form">ODDAJ RZECZY</Link>
         <button onClick={handleClick} className="logout_btn">Wyloguj</button>
       </div>
     )
