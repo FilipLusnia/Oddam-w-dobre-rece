@@ -1,8 +1,7 @@
-import React, {useState, useContext, useEffect} from 'react';
+import React from 'react';
 import {
     Link
 } from "react-router-dom";
-import {FirebaseContext} from "../Firebase/FirebaseIndex"
 
 import { ReactComponent as Decor } from '../../assets/Decoration.svg';
 import icon1 from '../../assets/Icon-1.svg';
@@ -11,14 +10,6 @@ import icon3 from '../../assets/Icon-3.svg';
 import icon4 from '../../assets/Icon-4.svg';
 
 export default function SimpleSteps() {
-
-    const [authUser, setAuthUser] = useState();
-
-    const {currUser} = useContext(FirebaseContext);
-    
-    useEffect(() => {
-        setAuthUser(currUser)
-    },[currUser]) 
 
     return (
         <div className="steps">
@@ -53,10 +44,7 @@ export default function SimpleSteps() {
                 </div>
             </div>
             <div className="steps_button">
-                {authUser !== null 
-                    ? <Link to="/oddaj-rzeczy" className="steps_button text">ODDAJ RZECZY</Link>
-                    : <Link to="/logowanie" className="steps_button text">ODDAJ RZECZY</Link>
-                }
+                <Link to="/oddaj-rzeczy" className="steps_button text">ODDAJ RZECZY</Link>
             </div>
         </div>
     )
