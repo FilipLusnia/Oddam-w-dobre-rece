@@ -16,8 +16,6 @@ export default function Home() {
 
     return (
         <>
-            {window.scrollTo(0, 0)}
-            
             <div className="header">
                 <div className="header-top">
                     <LoginRouting/>

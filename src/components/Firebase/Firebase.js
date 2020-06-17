@@ -1,6 +1,7 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/database'
+import React from 'react';
 
 const config = {
   apiKey: process.env.REACT_APP_apiKey,
@@ -12,10 +13,12 @@ const config = {
   appId: process.env.REACT_APP_appId
 };
 
-export default class Firebase{
+export default class Firebase extends React.Component{
 
-  constructor(){
-    firebase.initializeApp(config)
+  constructor(props){
+    super(props);
+    
+    firebase.initializeApp(config);
 
     this.fbauth = firebase.auth();
     this.fbdatabase = firebase.database();

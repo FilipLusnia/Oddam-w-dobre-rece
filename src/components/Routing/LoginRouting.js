@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useState, useContext, useEffect} from 'react';
 import {
     Link,
     useHistory
@@ -17,7 +17,7 @@ export default function LoginRouting() {
     customHistory.push("/");
   }
 
-  if (currUser !== null){
+  if (currUser?.email !== undefined){
     return(
       <div className="logout_nav">
         <p>Zalogowano jako: <span>{currUser?.email}</span></p>

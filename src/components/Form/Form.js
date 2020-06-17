@@ -19,47 +19,48 @@ import {FirebaseContext} from "../Firebase/FirebaseIndex"
 export default function Form() {
 
     const {currUser} = useContext(FirebaseContext);
-    const [authUser, setAuthUser] = useState();
-    
-    useEffect(() => {
-        setAuthUser(currUser)
-    },[currUser]) 
 
     const [step, setStep] = useState(1);
+
+    const handleNextPage = () => {
+        setStep(prev => prev + 1);
+    }
+
+    const handlePrevPage = () => {
+        setStep(prev => prev - 1);
+    }
 
     const formSwitch = (e) => {
         switch(step) {
             case 1:
                 return(
-                    <FormFirstStep/>
+                    <FormFirstStep handleNextPage={handleNextPage}/>
                 )
             case 2:
                 return(
-                    <FormSecondStep/>
+                    <FormSecondStep handleNextPage={handleNextPage} handlePrevPage={handlePrevPage}/>
                 )
             case 3:
                 return(
-                    <FormThirdStep/>
+                    <FormThirdStep handleNextPage={handleNextPage} handlePrevPage={handlePrevPage}/>
                 )
             case 4:
                 return(
-                    <FormFourthStep/>
+                    <FormFourthStep handleNextPage={handleNextPage} handlePrevPage={handlePrevPage}/>
                 )
             case 5:
                 return(
-                    <FormSummary/>
+                    <FormSummary handleNextPage={handleNextPage} handlePrevPage={handlePrevPage}/>
                 )
             case 6:
                 return(
-                    <FormThankYou/>
+                    <FormThankYou setStep={setStep}/>
                 )
         }
     }
 
     return (
         <>
-            {window.scrollTo(0, 0)}
-            
             <div className="header">
                     <LoginRouting/>
                 <div className="register_home_btn_container">
@@ -95,7 +96,7 @@ export default function Form() {
                 </div> 
             </>
             <>
-                { authUser !== null 
+                {currUser?.email !== undefined
                 ? 
                 <div className="form_main">
                     {formSwitch()}
