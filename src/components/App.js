@@ -22,10 +22,6 @@ export default function App() {
 
   const [registeredMess, setRegisteredMess] = useState("");
 
-  useEffect(() => {
-    
-  }, [])
-
   const isRegisteredMess = (e) => {
     setRegisteredMess(e);
   }
