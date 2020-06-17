@@ -2,6 +2,7 @@ import React from 'react';
 import {
     Link
 } from "react-router-dom";
+import { animateScroll as scroll } from 'react-scroll'
 
 import { ReactComponent as Decor } from '../../assets/Decoration.svg';
 import icon1 from '../../assets/Icon-1.svg';
@@ -10,6 +11,10 @@ import icon3 from '../../assets/Icon-3.svg';
 import icon4 from '../../assets/Icon-4.svg';
 
 export default function SimpleSteps() {
+
+    const handleClick = () => {
+        scroll.scrollToTop();
+    }
 
     return (
         <div className="steps">
@@ -44,7 +49,7 @@ export default function SimpleSteps() {
                 </div>
             </div>
             <div className="steps_button">
-                <Link to="/oddaj-rzeczy" className="steps_button text">ODDAJ RZECZY</Link>
+                <Link to="/oddaj-rzeczy" onClick={handleClick} className="steps_button text">ODDAJ RZECZY</Link>
             </div>
         </div>
     )

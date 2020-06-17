@@ -1,6 +1,6 @@
 import React, {useState, useContext, useEffect} from 'react';
 
-export default function FormThankYou({setStep}) {
+export default function FormThankYou() {
 
 
     return(

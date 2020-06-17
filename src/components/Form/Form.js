@@ -2,6 +2,7 @@ import React, {useState, useContext, useEffect} from 'react';
 import {
     Link
 } from "react-router-dom";
+import { animateScroll as scroll } from 'react-scroll'
 
 import LoginRouting from '../Routing/LoginRouting'
 import HomeButton from "../Routing/HomeButton"
@@ -30,7 +31,7 @@ export default function Form() {
         setStep(prev => prev - 1);
     }
 
-    const formSwitch = (e) => {
+    const formSwitch = () => {
         switch(step) {
             case 1:
                 return(
@@ -54,7 +55,7 @@ export default function Form() {
                 )
             case 6:
                 return(
-                    <FormThankYou setStep={setStep}/>
+                    <FormThankYou/>
                 )
         }
     }
