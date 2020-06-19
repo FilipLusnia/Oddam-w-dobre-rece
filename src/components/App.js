@@ -32,7 +32,7 @@ export default function App() {
           setAuthUser(null);
       }
     });
-  }, )
+  }, [])
 
   const isRegisteredMess = (e) => {
     setRegisteredMess(e);
