@@ -15,11 +15,11 @@ import FormFourthStep from "./FormFourthStep"
 import FormSummary from "./FormSummary"
 import FormThankYou from "./FormThankYou"
 
-import {FirebaseContext} from "../Firebase/FirebaseIndex"
+import {ProvideAuth} from "../Firebase/ProvideAuth"
 
 export default function Form() {
 
-    const {currUser} = useContext(FirebaseContext);
+    const [authUser] = useContext(ProvideAuth);
 
     const [step, setStep] = useState(1);
 
@@ -97,7 +97,7 @@ export default function Form() {
                 </div> 
             </>
             <>
-                {currUser?.email !== undefined
+                {authUser !== null
                 ? 
                 <div className="form_main">
                     {formSwitch()}

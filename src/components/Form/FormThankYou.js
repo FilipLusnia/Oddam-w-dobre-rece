@@ -5,7 +5,7 @@ export default function FormThankYou() {
 
     return(
         <div>
-            6
+            thx
         </div>
     )
 }

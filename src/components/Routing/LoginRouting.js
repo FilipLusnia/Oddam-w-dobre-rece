@@ -4,12 +4,14 @@ import {
     useHistory
 } from "react-router-dom";
 import {FirebaseContext} from "../Firebase/FirebaseIndex"
+import {ProvideAuth} from "../Firebase/ProvideAuth"
 
 export default function LoginRouting() {
 
   const customHistory = useHistory();
 
   const {signOut, currUser} = useContext(FirebaseContext);
+  const [authUser] = useContext(ProvideAuth);
 
   const handleClick = () => {
     signOut();
@@ -17,7 +19,7 @@ export default function LoginRouting() {
     customHistory.push("/");
   }
 
-  if (currUser?.email !== undefined){
+  if (authUser !== null){
     return(
       <div className="logout_nav">
         <p>Zalogowano jako: <span>{currUser?.email}</span></p>

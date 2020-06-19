@@ -12,15 +12,27 @@ import Form from './Form/Form';
 import Logoutn from './Logoutn';
 
 import {FirebaseContext} from "./Firebase/FirebaseIndex"
+import {ProvideAuth} from "./Firebase/ProvideAuth"
 
 import '../scss/main.scss';
 
 
 export default function App() {
 
-  const {currUser, signOut} = useContext(FirebaseContext);
+  const {fbauth} = useContext(FirebaseContext);
+  const [ ,setAuthUser] = useContext(ProvideAuth);
 
   const [registeredMess, setRegisteredMess] = useState("");
+
+  useEffect(() => {
+    fbauth.onAuthStateChanged(user => {
+      if (user) {
+          setAuthUser(user);
+      } else {
+          setAuthUser(null);
+      }
+    });
+  }, )
 
   const isRegisteredMess = (e) => {
     setRegisteredMess(e);
