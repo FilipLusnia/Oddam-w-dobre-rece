@@ -5,14 +5,22 @@ export default function FormFirstStep({handleNextPage, handleCheck, dataStack}) 
     return(
         <>
             <div>
-                <p className="">Krok 1/4</p>
+                <div className="">
+                    <h2>Ważne!</h2>
+                    <p>
+                        Uzupełnij szczegóły dotyczące twoich rzeczy.
+                        Dzięki temu będziemy wiedzieć, komu najlepiej je przekazać. 
+                    </p>
+                </div>
 
-                <h2 className="">Zaznacz co chcesz oddać:</h2>
+                <p>Krok 1/4</p>
+
+                <h2>Zaznacz co chcesz oddać:</h2>
 
                 <label className="">ubrania, które nadają się do ponownego użycia
                     <input type="checkbox" 
-                            checked={dataStack.clothesCheck}
-                            onChange={handleCheck('clothesCheck')}
+                        checked={dataStack.clothesCheck}
+                        onChange={handleCheck('clothesCheck')}
                     />
                 </label>
 

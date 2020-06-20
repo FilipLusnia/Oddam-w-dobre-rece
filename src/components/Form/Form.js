@@ -29,7 +29,7 @@ export default function Form() {
         bagsAmount: "-wybierz-",
 
         localization: "-wybierz-", targetGroup: false, organization: "",
-        
+
         street: "",
         city: "",
         zipCode: "",
