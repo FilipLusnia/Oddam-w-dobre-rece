@@ -52,6 +52,7 @@ export default function FormFirstStep({handleNextPage, handleCheck, dataStack}) 
                     />
                 </label>
             </div>
+            
             <button onClick={handleNextPage} className="">dalej</button>
         </>
     )
