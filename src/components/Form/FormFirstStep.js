@@ -45,7 +45,7 @@ export default function FormFirstStep({handleNextPage, handleCheck, dataStack}) 
                     />
                 </label>
 
-                <label className="">Inne
+                <label className="">inne
                     <input type="checkbox" 
                         checked={dataStack.otherCheck}
                         onChange={handleCheck('otherCheck')}

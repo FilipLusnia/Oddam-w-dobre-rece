@@ -4,7 +4,9 @@ export default function FormSecondStep({handleNextPage, handlePrevPage, handleIn
     return(
         <div>
             <p>Krok 2/4</p>
-            <h2>Podaj liczbę 60l worków, w które spakowałeś/aś rzeczy:</h2>
+
+            <h2>Podaj liczbę 60L worków, w które spakowałeś/aś rzeczy:</h2>
+            
             <div className="">
                 <label>Liczba 60L worków:</label>
 
