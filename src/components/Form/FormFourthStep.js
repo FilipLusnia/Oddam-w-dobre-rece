@@ -1,6 +1,6 @@
-import React, {useState, useContext, useEffect} from 'react';
+import React from 'react';
 
-export default function FormFourthStep({handleNextPage, handlePrevPage}) {
+export default function FormFourthStep({handleNextPage, handlePrevPage, handleInfo}) {
     return(
         <div>
             4

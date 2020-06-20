@@ -1,6 +1,6 @@
-import React, {useState, useContext, useEffect} from 'react';
+import React from 'react';
 
-export default function FormSecondStep({handleNextPage, handlePrevPage}) {
+export default function FormSecondStep({handleNextPage, handlePrevPage, handleInfo}) {
     return(
         <div>
             2

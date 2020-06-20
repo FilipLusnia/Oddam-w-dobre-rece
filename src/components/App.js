@@ -32,7 +32,7 @@ export default function App() {
           setAuthUser(null);
       }
     });
-  }, [])
+  }, [fbauth, setAuthUser])
 
   const isRegisteredMess = (e) => {
     setRegisteredMess(e);
@@ -43,10 +43,10 @@ export default function App() {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/logowanie" 
-          render={(props) => <Login {...props} registeredMess={registeredMess} />}
+          render={props => <Login {...props} registeredMess={registeredMess} />}
         />
         <Route exact path="/rejestracja" 
-          render={(props) => <Register {...props} isRegisteredMess={isRegisteredMess} />}
+          render={props => <Register {...props} isRegisteredMess={isRegisteredMess} />}
         />
         <Route exact path="/oddaj-rzeczy" component={Form} />
         <Route exact path="/wylogowano" component={Logoutn} />

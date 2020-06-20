@@ -1,6 +1,6 @@
-import React, {useState, useContext, useEffect} from 'react';
+import React from 'react';
 
-export default function FormThirdStep({handleNextPage, handlePrevPage}) {
+export default function FormThirdStep({handleNextPage, handlePrevPage, handleInfo, dataStack}) {
     return(
         <div>
             3

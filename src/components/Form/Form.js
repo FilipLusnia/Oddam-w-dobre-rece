@@ -1,8 +1,7 @@
-import React, {useState, useContext, useEffect} from 'react';
+import React, {useState, useContext} from 'react';
 import {
     Link
 } from "react-router-dom";
-import { animateScroll as scroll } from 'react-scroll'
 
 import LoginRouting from '../Routing/LoginRouting'
 import HomeButton from "../Routing/HomeButton"
@@ -23,6 +22,25 @@ export default function Form() {
 
     const [step, setStep] = useState(1);
 
+    const info = {
+        clothesCheck: false, trashClothesCheck: false, toysCheck: false,
+        booksCheck: false, otherCheck: false,
+
+        bagsAmount: "-wybierz-",
+
+        localization: "-wybierz-", targetGroup: false, organization: "",
+        
+        street: "",
+        city: "",
+        zipCode: "",
+        phone: "",
+        date: "",
+        time: "",
+        courierNotes: ""
+    }
+
+    const [dataStack, setDataStack] = useState(info);
+
     const handleNextPage = () => {
         setStep(prev => prev + 1);
     }
@@ -31,32 +49,67 @@ export default function Form() {
         setStep(prev => prev - 1);
     }
 
+    const handleInfo = input => e => {
+        const name = input;
+        const value = e.target.value;
+        setDataStack(prev => {return{...prev, [name]: value}})
+    }
+
+    const handleCheck = input => e => {
+        const name = input;
+        const value = e.target.checked;
+        setDataStack(prev => {return{...prev, [name]: value}})
+    }
+
     const formSwitch = () => {
         switch(step) {
             case 1:
                 return(
-                    <FormFirstStep handleNextPage={handleNextPage}/>
+                    <FormFirstStep 
+                        handleNextPage={handleNextPage}
+                        handleCheck={handleCheck}
+                        dataStack={dataStack}
+                    />
                 )
             case 2:
                 return(
-                    <FormSecondStep handleNextPage={handleNextPage} handlePrevPage={handlePrevPage}/>
+                    <FormSecondStep 
+                        handleNextPage={handleNextPage} 
+                        handlePrevPage={handlePrevPage}
+                        handleInfo={handleInfo}
+                        dataStack={dataStack}
+                    />
                 )
             case 3:
                 return(
-                    <FormThirdStep handleNextPage={handleNextPage} handlePrevPage={handlePrevPage}/>
+                    <FormThirdStep 
+                        handleNextPage={handleNextPage} 
+                        handlePrevPage={handlePrevPage}
+                        handleInfo={handleInfo}
+                        handleCheck={handleCheck}
+                        dataStack={dataStack}
+                    />
                 )
             case 4:
                 return(
-                    <FormFourthStep handleNextPage={handleNextPage} handlePrevPage={handlePrevPage}/>
+                    <FormFourthStep 
+                        handleNextPage={handleNextPage} 
+                        handlePrevPage={handlePrevPage}
+                        handleInfo={handleInfo}
+                    />
                 )
             case 5:
                 return(
-                    <FormSummary handleNextPage={handleNextPage} handlePrevPage={handlePrevPage}/>
+                    <FormSummary 
+                        handleNextPage={handleNextPage} 
+                        handlePrevPage={handlePrevPage}
+                    />
                 )
             case 6:
                 return(
                     <FormThankYou/>
                 )
+            default: return "Napotkano błąd";
         }
     }
 
