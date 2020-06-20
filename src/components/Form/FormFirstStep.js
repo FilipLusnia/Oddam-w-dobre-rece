@@ -40,14 +40,14 @@ export default function FormFirstStep({handleNextPage, handleCheck, dataStack}) 
 
                 <label className="">książki
                     <input type="checkbox" 
-                        checked={dataStack.clothesCheck}
+                        checked={dataStack.booksCheck}
                         onChange={handleCheck('booksCheck')}
                     />
                 </label>
 
                 <label className="">Inne
                     <input type="checkbox" 
-                        checked={dataStack.clothesCheck}
+                        checked={dataStack.otherCheck}
                         onChange={handleCheck('otherCheck')}
                     />
                 </label>
