@@ -35,35 +35,35 @@ export default function FormThirdStep({handleNextPage, handlePrevPage, handleInf
                 <label className="">Dzieciom
                     <input type="radio"
                         value="Dzieciom"
-                        checked={dataStack.targetGroup === "Dzieciom"}
+                        checked={dataStack.targetGroup === "dzieciom"}
                         onChange={handleInfo('targetGroup')}/>
                 </label>
 
                 <label className="">Samotnim matkom
                     <input type="radio"
                         value="Samotnim matkom"
-                        checked={dataStack.targetGroup === "Samotnim matkom"}
+                        checked={dataStack.targetGroup === "samotnym matkom"}
                         onChange={handleInfo('targetGroup')}/>
                 </label>
 
                 <label className="">Bezdomnym
                     <input type="radio"
                         value="Bezdomnym"
-                        checked={dataStack.targetGroup === "Bezdomnym"}
+                        checked={dataStack.targetGroup === "bezdomnym"}
                         onChange={handleInfo('targetGroup')}/>
                 </label>
 
                 <label className="">Niepełnosprawnym
                     <input type="radio" 
                         value="Niepełnosprawnym"
-                        checked={dataStack.targetGroup === "Niepełnosprawnym"}
+                        checked={dataStack.targetGroup === "niepełnosprawnym"}
                         onChange={handleInfo('targetGroup')}/>
                 </label>
 
                 <label className="">Osobom starszym
                     <input type="radio"
                         value="Osobom starszym"
-                        checked={dataStack.targetGroup === "Osobom starszym"}
+                        checked={dataStack.targetGroup === "osobom starszym"}
                         onChange={handleInfo('targetGroup')}/>
                 </label>
             </div>
