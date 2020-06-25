@@ -1,8 +1,18 @@
 import React from 'react';
 
-export default function FormThirdStep({handleNextPage, handlePrevPage, handleInfo, handleCheck, dataStack}) {
+export default function FormThirdStep({handleNextPage, handlePrevPage, handleInfo, dataStack}) {
     return(
         <>
+            <div className="">
+                <h2>Ważne!</h2>
+                <p>
+                    Jeśli wiesz, komu chcesz pomóc, 
+                    możesz wpisać nazwę tej organizacji w wyszukiwarce.
+                    Możesz też filtrować organizacje <br/>
+                    po ich lokalizacji bądź celu ich pomocy.
+                </p>
+            </div>
+
             <p className="step-number">Krok 3/4</p>
 
             <label className="">Lokalizacja:</label>

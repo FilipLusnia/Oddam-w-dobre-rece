@@ -3,24 +3,34 @@ import React from 'react';
 export default function FormSecondStep({handleNextPage, handlePrevPage, handleInfo, dataStack}) {
     return(
         <div>
+            <div className="">
+                <h2>Ważne!</h2>
+                <p>
+                    Wszystkie rzeczy do oddania zapakuj w 60L worki.
+                    Dokładną instrukcję jak poprawnie spakować rzeczy,
+                    znajdziesz <a href="">TUTAJ</a>.
+                </p>
+            </div>
+
             <p>Krok 2/4</p>
 
             <h2>Podaj liczbę 60L worków, w które spakowałeś/aś rzeczy:</h2>
             
             <div className="">
-                <label>Liczba 60L worków:</label>
+                <label>Liczba 60L worków:
 
-                <select className="" 
-                    value={dataStack.bagsAmount} 
-                    onChange={handleInfo('bagsAmount')}>
+                    <select className="" 
+                        value={dataStack.bagsAmount} 
+                        onChange={handleInfo('bagsAmount')}>
 
-                    <option>-wybierz-</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
+                        <option>-wybierz-</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </label>
             </div>
 
             <button onClick={handlePrevPage} className="">wstecz</button>

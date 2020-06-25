@@ -86,7 +86,6 @@ export default function Form() {
                         handleNextPage={handleNextPage} 
                         handlePrevPage={handlePrevPage}
                         handleInfo={handleInfo}
-                        handleCheck={handleCheck}
                         dataStack={dataStack}
                     />
                 )
