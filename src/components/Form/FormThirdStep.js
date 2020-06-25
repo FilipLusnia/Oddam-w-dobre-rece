@@ -13,22 +13,23 @@ export default function FormThirdStep({handleNextPage, handlePrevPage, handleInf
                 </p>
             </div>
 
-            <p className="step-number">Krok 3/4</p>
+            <p>Krok 3/4</p>
 
-            <label className="">Lokalizacja:</label>
-            <div>
-                <select className="" value={dataStack.localization}
-                        onChange={handleInfo('localization')}>
-                    <option value="-wybierz-">-wybierz-</option>
-                    <option value="Poznań">Poznań</option>
-                    <option value="Warszawa">Warszawa</option>
-                    <option value="Kraków">Kraków</option>
-                    <option value="Wrocław">Wrocław</option>
-                    <option value="Katowice">Katowice</option>
-                </select>
-            </div>
+            <label>Lokalizacja:
+                <div>
+                    <select className="" value={dataStack.localization}
+                            onChange={handleInfo('localization')}>
+                        <option value="-wybierz-">-wybierz-</option>
+                        <option value="Poznań">Poznań</option>
+                        <option value="Warszawa">Warszawa</option>
+                        <option value="Kraków">Kraków</option>
+                        <option value="Wrocław">Wrocław</option>
+                        <option value="Katowice">Katowice</option>
+                    </select>
+                </div>
+            </label>
 
-            <h2 className="">Komu chcesz pomóc?</h2>
+            <h2>Komu chcesz pomóc?</h2>
 
             <div className="">
                 <label className="">Dzieciom
@@ -65,8 +66,8 @@ export default function FormThirdStep({handleNextPage, handlePrevPage, handleInf
                         checked={dataStack.targetGroup === "Osobom starszym"}
                         onChange={handleInfo('targetGroup')}/>
                 </label>
-
             </div>
+
             <label> Wpisz nazwę konkretnej organizacji (opcjonalnie)
                 <input className="" type="text"
                     value={dataStack.organization}
@@ -74,8 +75,8 @@ export default function FormThirdStep({handleNextPage, handlePrevPage, handleInf
             </label>
             
 
-            <button onClick={handlePrevPage}>wstecz</button>
-            <button onClick={handleNextPage}>dalej</button>
+            <button onClick={handlePrevPage} className="">wstecz</button>
+            <button onClick={handleNextPage} className="">dalej</button>
         </>
     )
 }

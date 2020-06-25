@@ -23,8 +23,8 @@ export default function Form() {
     const [step, setStep] = useState(1);
 
     const info = {
-        clothesCheck: false, trashClothesCheck: false, toysCheck: false,
-        booksCheck: false, otherCheck: false,
+        clothes: false, trash: false, toys: false,
+        books: false, other: false,
 
         bagsAmount: "-wybierz-",
 
@@ -95,6 +95,7 @@ export default function Form() {
                         handleNextPage={handleNextPage} 
                         handlePrevPage={handlePrevPage}
                         handleInfo={handleInfo}
+                        dataStack={dataStack}
                     />
                 )
             case 5:
@@ -102,6 +103,7 @@ export default function Form() {
                     <FormSummary 
                         handleNextPage={handleNextPage} 
                         handlePrevPage={handlePrevPage}
+                        dataStack={dataStack}
                     />
                 )
             case 6:

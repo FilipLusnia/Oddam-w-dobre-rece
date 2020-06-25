@@ -19,36 +19,36 @@ export default function FormFirstStep({handleNextPage, handleCheck, dataStack}) 
 
                 <label className="">ubrania, które nadają się do ponownego użycia
                     <input type="checkbox" 
-                        checked={dataStack.clothesCheck}
-                        onChange={handleCheck('clothesCheck')}
+                        checked={dataStack.clothes}
+                        onChange={handleCheck('clothes')}
                     />
                 </label>
 
                 <label className="">ubrania, do wyrzucenia
                     <input type="checkbox" 
-                        checked={dataStack.trashClothesCheck}
-                        onChange={handleCheck('trashClothesCheck')}
+                        checked={dataStack.trash}
+                        onChange={handleCheck('trash')}
                     />
                 </label>
 
                 <label className="">zabawki
                     <input type="checkbox" 
-                        checked={dataStack.toysCheck}
-                        onChange={handleCheck('toysCheck')}
+                        checked={dataStack.toys}
+                        onChange={handleCheck('toys')}
                     />
                 </label>
 
                 <label className="">książki
                     <input type="checkbox" 
-                        checked={dataStack.booksCheck}
-                        onChange={handleCheck('booksCheck')}
+                        checked={dataStack.books}
+                        onChange={handleCheck('books')}
                     />
                 </label>
 
                 <label className="">inne
                     <input type="checkbox" 
-                        checked={dataStack.otherCheck}
-                        onChange={handleCheck('otherCheck')}
+                        checked={dataStack.other}
+                        onChange={handleCheck('other')}
                     />
                 </label>
             </div>
