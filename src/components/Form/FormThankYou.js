@@ -6,7 +6,7 @@ export default function FormThankYou() {
         <div>
             <p>
                 Dziękujemy za przesłanie formularza.<br/> 
-                Na maila prześlemy wszelkie informacje oodbiorze.
+                Na maila prześlemy wszelkie informacje o odbiorze.
             </p>
         </div>
     )
