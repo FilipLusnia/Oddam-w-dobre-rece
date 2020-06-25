@@ -1,6 +1,26 @@
 import React from 'react';
 
 export default function FormFourthStep({handleNextPage, handlePrevPage, handleInfo, dataStack}) {
+
+    const validateData = () =>{
+
+        if (dataStack.street <= 4){
+                alert("Wpisz właściwą nazwę ulicy.")
+            } else if (dataStack.city <= 4){
+                alert("Wpisz właściwą nazwę miasta.")
+            } else if (!dataStack.zipCode.match(/^[0-9]{2}-[0-9]{3}$/)){
+                alert("Wpisz kod pocztowy we właściwym formacie (xx-xxx).")
+            } else if (!dataStack.phone.match(/^([0-9]{9})$/)){
+                alert("Wpisz numer telefonu we właściwym formacie (xxxyyyzzz).")
+            } else if (!dataStack.date){
+                alert("Wybierz datę.")
+            } else if (!dataStack.time.match(/^([01]?[0-9]|2[0-3]):[0-5][0-9]$/)){
+                alert("Wpisz godzinę we właściwym formacie (hh:mm).")
+            } else {
+                handleNextPage();
+        }
+    }
+
     return(
         <>
             <div className="">
@@ -78,7 +98,7 @@ export default function FormFourthStep({handleNextPage, handlePrevPage, handleIn
         
 
             <button onClick={handlePrevPage} className="">wstecz</button>
-            <button onClick={handleNextPage} className="">dalej</button>
+            <button onClick={validateData} className="">dalej</button>
         </>
     )
 }

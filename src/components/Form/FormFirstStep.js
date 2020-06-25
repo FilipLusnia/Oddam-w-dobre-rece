@@ -2,6 +2,18 @@ import React from 'react';
 
 export default function FormFirstStep({handleNextPage, handleCheck, dataStack}) {
 
+    const validateData = () =>{
+        if (dataStack.clothes || 
+            dataStack.trash || 
+            dataStack.toys || 
+            dataStack.books || 
+            dataStack.other){
+                handleNextPage()
+            } else {
+                alert('Zaznacz conajmniej jedną opcję.')
+        }
+    }
+
     return(
         <>
             <div>
@@ -53,7 +65,7 @@ export default function FormFirstStep({handleNextPage, handleCheck, dataStack}) 
                 </label>
             </div>
             
-            <button onClick={handleNextPage} className="">dalej</button>
+            <button onClick={validateData} className="">dalej</button>
         </>
     )
 }

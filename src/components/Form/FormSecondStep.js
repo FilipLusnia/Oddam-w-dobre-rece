@@ -1,6 +1,19 @@
 import React from 'react';
+import {
+    Link
+} from "react-router-dom";
 
 export default function FormSecondStep({handleNextPage, handlePrevPage, handleInfo, dataStack}) {
+
+    const validateData = () =>{
+
+        if (dataStack.bagsAmount !== "-wybierz-"){
+                handleNextPage()
+            } else {
+                alert('Zaznacz w ile worków chcesz zapakować rzeczy.')
+        }
+    }
+
     return(
         <div>
             <div className="">
@@ -8,7 +21,7 @@ export default function FormSecondStep({handleNextPage, handlePrevPage, handleIn
                 <p>
                     Wszystkie rzeczy do oddania zapakuj w 60L worki.
                     Dokładną instrukcję jak poprawnie spakować rzeczy,
-                    znajdziesz <a href="">TUTAJ</a>.
+                    znajdziesz <Link to="#">TUTAJ</Link>.
                 </p>
             </div>
 
@@ -34,7 +47,7 @@ export default function FormSecondStep({handleNextPage, handlePrevPage, handleIn
             </div>
 
             <button onClick={handlePrevPage} className="">wstecz</button>
-            <button onClick={handleNextPage} className="">dalej</button>
+            <button onClick={validateData} className="">dalej</button>
         </div>
     )
 }

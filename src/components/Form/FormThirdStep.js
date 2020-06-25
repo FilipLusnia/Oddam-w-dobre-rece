@@ -1,6 +1,18 @@
 import React from 'react';
 
 export default function FormThirdStep({handleNextPage, handlePrevPage, handleInfo, dataStack}) {
+
+    const validateData = () =>{
+        
+        if (dataStack.localization === "-wybierz-"){
+            alert("Wybierz lokalizację. ")
+        } else if (!dataStack.targetGroup){
+            alert("Zaznacz conajmniej jedną grupę odbiorców. ")
+        } else {
+            handleNextPage();
+        }
+    }
+
     return(
         <>
             <div className="">
@@ -76,7 +88,7 @@ export default function FormThirdStep({handleNextPage, handlePrevPage, handleInf
             
 
             <button onClick={handlePrevPage} className="">wstecz</button>
-            <button onClick={handleNextPage} className="">dalej</button>
+            <button onClick={validateData} className="">dalej</button>
         </>
     )
 }
