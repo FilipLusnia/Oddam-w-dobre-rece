@@ -8,15 +8,21 @@ export default function FormSummary({handleNextPage, handlePrevPage, dataStack})
 
                 <h3 className="">Oddajesz:</h3>
                 <p className="">Ilość worków: {dataStack.bagsAmount}, 
-                    {dataStack.clothes && " ubrania do ponownego użycia"}
-                    {dataStack.trash && " ubrania do wyrzucenia"}
-                    {dataStack.toys && " zabawki"}
-                    {dataStack.books && " książki"}
-                    {dataStack.other && " inne"}
-                    {dataStack.targetGroup && `, ${dataStack.targetGroup}`}
-                    {dataStack.organization && `, ${dataStack.organization}`}
+                    {dataStack.clothes && " ubrania do ponownego użycia, "}
+                    {dataStack.trash && " ubrania do wyrzucenia, "}
+                    {dataStack.toys && " zabawki, "}
+                    {dataStack.books && " książki, "}
+                    {dataStack.other && " inne, "}
+                    {dataStack.targetGroup && `${dataStack.targetGroup}`}
                 </p>
+
                 <p className="">dla lokalizacji: {dataStack.localization}</p>
+
+                <p className="">
+                    Nazwa wybranej organizacji:
+                    {dataStack.organization && ` ${dataStack.organization}`}
+                </p>
+
                 <div className="">
                     <div className="">
                         <h3 className="">Adres odbioru:</h3>
