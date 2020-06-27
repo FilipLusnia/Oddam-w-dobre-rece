@@ -15,8 +15,8 @@ export default function FormSecondStep({handleNextPage, handlePrevPage, handleIn
     }
 
     return(
-        <div>
-            <div className="">
+        <>
+            <div className="form_warn">
                 <h2>Ważne!</h2>
                 <p>
                     Wszystkie rzeczy do oddania zapakuj w 60L worki.
@@ -25,29 +25,31 @@ export default function FormSecondStep({handleNextPage, handlePrevPage, handleIn
                 </p>
             </div>
 
-            <p>Krok 2/4</p>
+            <div>
+                <p>Krok 2/4</p>
 
-            <h2>Podaj liczbę 60L worków, w które spakowałeś/aś rzeczy:</h2>
-            
-            <div className="">
-                <label>Liczba 60L worków:
+                <h2>Podaj liczbę 60L worków, w które spakowałeś/aś rzeczy:</h2>
+                
+                <div className="">
+                    <label>Liczba 60L worków:
 
-                    <select className="" 
-                        value={dataStack.bagsAmount} 
-                        onChange={handleInfo('bagsAmount')}>
+                        <select className="" 
+                            value={dataStack.bagsAmount} 
+                            onChange={handleInfo('bagsAmount')}>
 
-                        <option>-wybierz-</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
-                </label>
+                            <option>-wybierz-</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </label>
+                </div>
             </div>
 
-            <button onClick={handlePrevPage} className="">wstecz</button>
-            <button onClick={validateData} className="">dalej</button>
-        </div>
+            <button onClick={handlePrevPage} className="form_btn">wstecz</button>
+            <button onClick={validateData} className="form_btn">dalej</button>
+        </>
     )
 }

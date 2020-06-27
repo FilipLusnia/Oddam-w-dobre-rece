@@ -68,7 +68,8 @@
 
 .form_main{
     min-width: 100vw;
-    height: 1100px;
+    height: 800px;
+    background-color: $color-1;
 }
 
 .form_main_alternative{
@@ -114,5 +115,42 @@
     .register-btn:hover{
         transition: 0.4s;
         color: white;
+    }
+}
+
+.form_warn{
+    background-color: $color-2;
+    color: $color-5;
+    height: 120px;
+    padding-left: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+
+    h2{
+        color: black;
+        font-size: 25px;
+        font-weight: 600;
+        margin-bottom: 9px;
+    }
+}
+
+.form_btn{
+    color: $color_4;
+    width: 210px;
+    height: 80px;
+    border: 1px solid $color_4;
+    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    padding: 2px;
+    
+    .text {
+        text-decoration: none;
+        border: none;
+        text-align: center;
     }
 }

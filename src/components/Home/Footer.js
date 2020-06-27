@@ -91,29 +91,29 @@ export default function Footer() {
 
     return (
         <div className="footer">
-            <div className="form_container">
+            <div className="contact_container">
                 <h1>Skontaktuj się z nami</h1>
                 <img src={decor} alt="" className="about_decor"></img>
                 <h4>{succesMess}</h4>
-                <form className="footer_form">
-                    <div className="form_data">
-                        <label className="form_data name">
+                <form className="footer_contact">
+                    <div className="contact_data">
+                        <label className="contact_data name">
                             Wpisz swoje imię:
-                            <input type="text" className="form_data name_input" onChange={e=> setNameVal(e.target.value)} style={nameBorder} placeholder="Imię"/>
+                            <input type="text" className="contact_data name_input" onChange={e=> setNameVal(e.target.value)} style={nameBorder} placeholder="Imię"/>
                             <p style={errStyle}>{nameErr}</p>
                         </label>
-                        <label className="form_data email">
+                        <label className="contact_data email">
                             Wpisz swój e-mail:
-                            <input type="email" className="form_data email_input" onChange={e=> setEmailVal(e.target.value)} style={emailBorder} placeholder="xyz@abc.pl"/>
+                            <input type="email" className="contact_data email_input" onChange={e=> setEmailVal(e.target.value)} style={emailBorder} placeholder="xyz@abc.pl"/>
                             <p style={errStyle}>{emailErr}</p>
                         </label>
                     </div>
-                    <label className="form_text">
+                    <label className="contact_text">
                         Wpisz swoją wiadomość:
                         <textarea onChange={e=> setTextVal(e.target.value)} style={textBorder} placeholder="Napisz swoją wiadomość."></textarea>
                         <p style={errStyle}>{textErr}</p>
                     </label>
-                    <input type="submit" className="form_btn" value="Wyślij" onClick={handleClick}/>
+                    <input type="submit" className="contact_btn" value="Wyślij" onClick={handleClick}/>
                 </form>
             </div>
             <div className="footer_bottom">

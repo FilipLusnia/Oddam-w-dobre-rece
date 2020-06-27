@@ -41,8 +41,8 @@ export default function FormSummary({handleNextPage, handlePrevPage, dataStack})
             </> 
 
 
-            <button onClick={handlePrevPage} className="">wstecz</button>
-            <button onClick={handleNextPage} className="">Potwierdzam</button>
+            <button onClick={handlePrevPage} className="form_btn">wstecz</button>
+            <button onClick={handleNextPage} className="form_btn">Potwierdzam</button>
         </>
     )
 }

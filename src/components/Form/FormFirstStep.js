@@ -16,15 +16,14 @@ export default function FormFirstStep({handleNextPage, handleCheck, dataStack}) 
 
     return(
         <>
+            <div className="form_warn">
+                <h2>Ważne!</h2>
+                <p>
+                    Uzupełnij szczegóły dotyczące twoich rzeczy.
+                    Dzięki temu będziemy wiedzieć, komu najlepiej je przekazać. 
+                </p>
+            </div>
             <div>
-                <div className="">
-                    <h2>Ważne!</h2>
-                    <p>
-                        Uzupełnij szczegóły dotyczące twoich rzeczy.
-                        Dzięki temu będziemy wiedzieć, komu najlepiej je przekazać. 
-                    </p>
-                </div>
-
                 <p>Krok 1/4</p>
 
                 <h2>Zaznacz co chcesz oddać:</h2>
@@ -65,7 +64,7 @@ export default function FormFirstStep({handleNextPage, handleCheck, dataStack}) 
                 </label>
             </div>
             
-            <button onClick={validateData} className="">dalej</button>
+            <button onClick={validateData} className="form_btn">dalej</button>
         </>
     )
 }
