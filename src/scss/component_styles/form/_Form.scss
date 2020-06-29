@@ -68,8 +68,8 @@
 
 .form_main{
     min-width: 100vw;
-    height: 800px;
-    background-color: $color-1;
+    height: 700px;
+    background-color: rgb(232, 231, 226);
 }
 
 .form_main_alternative{
@@ -136,21 +136,38 @@
     }
 }
 
+.form_btn_container{
+    transform: translate(0px, -100px);
+    padding-left: 100px;
+    display: flex;
+}
+
 .form_btn{
-    color: $color_4;
-    width: 210px;
-    height: 80px;
-    border: 1px solid $color_4;
-    margin: 0 10px;
+    color: $color_5;
+    width: 140px;
+    height: 60px;
+    border: 1px solid $color_5;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 28px;
+    font-size: 18px;
+    font-weight: 300;
     padding: 2px;
+    cursor: pointer;
+    transition: 0.2s;
+    outline: none;
+    background: none;
+    margin-right: 40px;
     
     .text {
         text-decoration: none;
         border: none;
         text-align: center;
     }
+}
+
+.form_btn:hover{
+    transition: 0.2s;
+    color: rgb(170, 170, 170);
+    border-color: rgb(170, 170, 170);
 }

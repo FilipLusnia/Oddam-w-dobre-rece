@@ -3,7 +3,7 @@ import React from 'react';
 export default function FormSummary({handleNextPage, handlePrevPage, dataStack}) {
     return(
         <>
-            <>
+            <div className="form_summary_container">
                 <h2>Podsumowanie Twojej darowizny</h2>
 
                 <h3 className="">Oddajesz:</h3>
@@ -38,11 +38,12 @@ export default function FormSummary({handleNextPage, handlePrevPage, dataStack})
                         {dataStack.courierNotes && <p><strong>Uwagi dla kuriera:</strong> {dataStack.courierNotes}</p>}
                     </div>
                 </div>
-            </> 
+            </div> 
 
-
-            <button onClick={handlePrevPage} className="form_btn">wstecz</button>
-            <button onClick={handleNextPage} className="form_btn">Potwierdzam</button>
+            <div className="form_btn_container">
+                <button onClick={handlePrevPage} className="form_btn">wstecz</button>
+                <button onClick={handleNextPage} className="form_btn">Potwierdzam</button>
+            </div>
         </>
     )
 }

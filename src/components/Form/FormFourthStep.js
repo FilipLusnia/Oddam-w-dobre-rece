@@ -28,7 +28,7 @@ export default function FormFourthStep({handleNextPage, handlePrevPage, handleIn
                 <p>Podaj adres oraz termin odbioru rzeczy.</p>
             </div>
 
-            <div>
+            <div className="form_fourth_container">
                 <p>Krok 4/4</p>
 
                 <h2>Podaj adres oraz termin odbioru rzecz przez kuriera</h2>
@@ -97,9 +97,10 @@ export default function FormFourthStep({handleNextPage, handlePrevPage, handleIn
                 </div>
             </div>
         
-
-            <button onClick={handlePrevPage} className="form_btn">wstecz</button>
-            <button onClick={validateData} className="form_btn">dalej</button>
+            <div className="form_btn_container">
+                <button onClick={handlePrevPage} className="form_btn">wstecz</button>
+                <button onClick={validateData} className="form_btn">dalej</button>
+            </div>
         </>
     )
 }

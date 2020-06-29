@@ -25,12 +25,12 @@ export default function FormSecondStep({handleNextPage, handlePrevPage, handleIn
                 </p>
             </div>
 
-            <div>
+            <div className="form_second_container">
                 <p>Krok 2/4</p>
 
                 <h2>Podaj liczbę 60L worków, w które spakowałeś/aś rzeczy:</h2>
                 
-                <div className="">
+                <div>
                     <label>Liczba 60L worków:
 
                         <select className="" 
@@ -48,8 +48,10 @@ export default function FormSecondStep({handleNextPage, handlePrevPage, handleIn
                 </div>
             </div>
 
-            <button onClick={handlePrevPage} className="form_btn">wstecz</button>
-            <button onClick={validateData} className="form_btn">dalej</button>
+            <div className="form_btn_container">
+                <button onClick={handlePrevPage} className="form_btn">wstecz</button>
+                <button onClick={validateData} className="form_btn">dalej</button>
+            </div>
         </>
     )
 }

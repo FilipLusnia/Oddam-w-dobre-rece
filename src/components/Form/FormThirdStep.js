@@ -25,7 +25,7 @@ export default function FormThirdStep({handleNextPage, handlePrevPage, handleInf
                 </p>
             </div>
 
-            <div>
+            <div className="form_third_container">
                 <p>Krok 3/4</p>
 
                 <label>Lokalizacja:
@@ -44,7 +44,7 @@ export default function FormThirdStep({handleNextPage, handlePrevPage, handleInf
 
                 <h2>Komu chcesz pomóc?</h2>
 
-                <div className="">
+                <div>
                     <label className="">Dzieciom
                         <input type="radio"
                             value="dzieciom"
@@ -88,9 +88,10 @@ export default function FormThirdStep({handleNextPage, handlePrevPage, handleInf
                 </label>
             </div>
             
-
-            <button onClick={handlePrevPage} className="form_btn">wstecz</button>
-            <button onClick={validateData} className="form_btn">dalej</button>
+            <div className="form_btn_container">
+                <button onClick={handlePrevPage} className="form_btn">wstecz</button>
+                <button onClick={validateData} className="form_btn">dalej</button>
+            </div>
         </>
     )
 }
