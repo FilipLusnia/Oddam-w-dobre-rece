@@ -28,11 +28,11 @@ export default function FormThirdStep({handleNextPage, handlePrevPage, handleInf
             <div className="form_third_container">
                 <p>Krok 3/4</p>
 
-                <label>Lokalizacja:
+                <h2>Lokalizacja:</h2>
                     <div>
-                        <select className="" value={dataStack.localization}
+                        <select className="form_third_select" value={dataStack.localization}
                                 onChange={handleInfo('localization')}>
-                            <option value="-wybierz-">-wybierz-</option>
+                            <option value="-wybierz-">- wybierz -</option>
                             <option value="Poznań">Poznań</option>
                             <option value="Warszawa">Warszawa</option>
                             <option value="Kraków">Kraków</option>
@@ -40,57 +40,62 @@ export default function FormThirdStep({handleNextPage, handlePrevPage, handleInf
                             <option value="Katowice">Katowice</option>
                         </select>
                     </div>
-                </label>
 
-                <h2>Komu chcesz pomóc?</h2>
+                <h3>Komu chcesz pomóc?</h3>
 
-                <div>
-                    <label className="">Dzieciom
+                <div className="form_third_radio_container-first">
+                    <label className="form_third_radio">Dzieciom
                         <input type="radio"
                             value="dzieciom"
                             checked={dataStack.targetGroup === "dzieciom"}
                             onChange={handleInfo('targetGroup')}/>
+                        <span className="form_third_radio_selector"/>
                     </label>
 
-                    <label className="">Samotnym matkom
+                    <label className="form_third_radio">Samotnym matkom
                         <input type="radio"
                             value="samotnym matkom"
                             checked={dataStack.targetGroup === "samotnym matkom"}
                             onChange={handleInfo('targetGroup')}/>
+                        <span className="form_third_radio_selector"/>
                     </label>
 
-                    <label className="">Bezdomnym
+                    <label className="form_third_radio">Bezdomnym
                         <input type="radio"
                             value="bezdomnym"
                             checked={dataStack.targetGroup === "bezdomnym"}
                             onChange={handleInfo('targetGroup')}/>
+                        <span className="form_third_radio_selector"/>
                     </label>
+                </div>
 
-                    <label className="">Niepełnosprawnym
+                <div className="form_third_radio_container-second">
+                    <label className="form_third_radio">Niepełnosprawnym
                         <input type="radio" 
                             value="niepełnosprawnym"
                             checked={dataStack.targetGroup === "niepełnosprawnym"}
                             onChange={handleInfo('targetGroup')}/>
+                        <span className="form_third_radio_selector"/>
                     </label>
 
-                    <label className="">Osobom starszym
+                    <label className="form_third_radio">Osobom starszym
                         <input type="radio"
                             value="osobom starszym"
                             checked={dataStack.targetGroup === "osobom starszym"}
                             onChange={handleInfo('targetGroup')}/>
+                        <span className="form_third_radio_selector"/>
                     </label>
                 </div>
 
-                <label> Wpisz nazwę konkretnej organizacji (opcjonalnie)
-                    <input className="" type="text"
+                <h3>Wpisz nazwę konkretnej organizacji (opcjonalnie)</h3>
+                    <input className="form_third_company" type="text"
                         value={dataStack.organization}
                         onChange={handleInfo('organization')}/>
-                </label>
             </div>
             
             <div className="form_btn_container">
-                <button onClick={handlePrevPage} className="form_btn">wstecz</button>
-                <button onClick={validateData} className="form_btn">dalej</button>
+                <button onClick={handlePrevPage} className="form_btn">Wstecz</button>
+                <button onClick={validateData} className="form_btn">Dalej</button>
             </div>
         </>
     )

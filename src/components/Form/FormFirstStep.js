@@ -28,39 +28,44 @@ export default function FormFirstStep({handleNextPage, handleCheck, dataStack}) 
 
                 <h2>Zaznacz co chcesz oddać:</h2>
 
-                <label className="form_first_input">ubrania, które nadają się do ponownego użycia
+                <label>
                     <input type="checkbox" 
                         checked={dataStack.clothes}
                         onChange={handleCheck('clothes')}
-                    />
+                    /> 
+                    <div className="form_first_checkbox"></div> ubrania, które nadają się do ponownego użycia
                 </label>
 
-                <label className="form_first_input">ubrania, do wyrzucenia
+                <label>
                     <input type="checkbox" 
                         checked={dataStack.trash}
                         onChange={handleCheck('trash')}
-                    />
+                    /> 
+                    <div className="form_first_checkbox"></div> ubrania, do wyrzucenia
                 </label>
 
-                <label className="form_first_input">zabawki
+                <label>
                     <input type="checkbox" 
                         checked={dataStack.toys}
                         onChange={handleCheck('toys')}
-                    />
+                    /> 
+                    <div className="form_first_checkbox"></div> zabawki
                 </label>
 
-                <label className="form_first_input">książki
+                <label>
                     <input type="checkbox" 
                         checked={dataStack.books}
                         onChange={handleCheck('books')}
-                    />
+                    /> 
+                    <div className="form_first_checkbox"></div> książki
                 </label>
 
-                <label className="form_first_input">inne
+                <label>
                     <input type="checkbox" 
                         checked={dataStack.other}
                         onChange={handleCheck('other')}
-                    />
+                    /> 
+                    <div className="form_first_checkbox"></div> inne
                 </label>
             </div>
             

@@ -6,4 +6,40 @@
     min-height: calc(100% - 120px);
     overflow: hidden;
     padding-left: 100px;
+
+    p{
+        margin-top: 30px;
+        font-size: 17px;
+        color: $color-4;
+    }
+
+    h2{
+        margin-top: 60px;
+        margin-bottom: 50px;
+        font-size: 26px;
+        font-weight: 600;
+    }
+
+    label{
+        color: $color-5;
+        font-size: 17px;
+        display: flex;
+        align-items: center;
+    }
+
+    .form_second_select{
+        margin-left: 15px;
+        height: 38px;
+        width: 250px;
+        background: none;
+        outline: none;
+        font-size: 18px;
+        font-family: $font-base;
+        color: $color-5;
+        padding-left: 15px;
+
+        option{
+           background-color: $color-1;
+        }
+    }
 }

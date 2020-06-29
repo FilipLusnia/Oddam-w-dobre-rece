@@ -33,11 +33,12 @@ export default function FormSecondStep({handleNextPage, handlePrevPage, handleIn
                 <div>
                     <label>Liczba 60L worków:
 
-                        <select className="" 
+                        <select
                             value={dataStack.bagsAmount} 
-                            onChange={handleInfo('bagsAmount')}>
+                            onChange={handleInfo('bagsAmount')}
+                            className="form_second_select">
 
-                            <option>-wybierz-</option>
+                            <option value="-wybierz-">- wybierz -</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -49,8 +50,8 @@ export default function FormSecondStep({handleNextPage, handlePrevPage, handleIn
             </div>
 
             <div className="form_btn_container">
-                <button onClick={handlePrevPage} className="form_btn">wstecz</button>
-                <button onClick={validateData} className="form_btn">dalej</button>
+                <button onClick={handlePrevPage} className="form_btn">Wstecz</button>
+                <button onClick={validateData} className="form_btn">Dalej</button>
             </div>
         </>
     )

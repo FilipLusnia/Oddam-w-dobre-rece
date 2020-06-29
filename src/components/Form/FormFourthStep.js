@@ -98,8 +98,8 @@ export default function FormFourthStep({handleNextPage, handlePrevPage, handleIn
             </div>
         
             <div className="form_btn_container">
-                <button onClick={handlePrevPage} className="form_btn">wstecz</button>
-                <button onClick={validateData} className="form_btn">dalej</button>
+                <button onClick={handlePrevPage} className="form_btn">Wstecz</button>
+                <button onClick={validateData} className="form_btn">Dalej</button>
             </div>
         </>
     )

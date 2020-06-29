@@ -41,7 +41,7 @@ export default function FormSummary({handleNextPage, handlePrevPage, dataStack})
             </div> 
 
             <div className="form_btn_container">
-                <button onClick={handlePrevPage} className="form_btn">wstecz</button>
+                <button onClick={handlePrevPage} className="form_btn">Wstecz</button>
                 <button onClick={handleNextPage} className="form_btn">Potwierdzam</button>
             </div>
         </>

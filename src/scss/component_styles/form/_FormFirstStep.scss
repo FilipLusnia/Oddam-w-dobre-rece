@@ -6,8 +6,46 @@
     min-height: calc(100% - 120px);
     overflow: hidden;
     padding-left: 100px;
+    display: flex;
+    flex-direction: column;
+
+    p{
+        margin-top: 30px;
+        font-size: 17px;
+        color: $color-4;
+    }
+
+    h2{
+        margin-top: 60px;
+        margin-bottom: 30px;
+        font-size: 26px;
+        font-weight: 600;
+    }
+
+    label {
+        font-size: 18px;
+        color: $color-5;
+        margin-bottom: 25px;
+        display: flex;
+        text-align: center;
+        align-items: center;
+    }
+
+    input {
+        display: none;
+    }
+
+    .form_first_checkbox{
+        border: 1px solid $color-5;
+        background: none;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        margin-right: 25px;
+    }
+    
+    input:checked ~ .form_first_checkbox{
+        background: $color-2;
+    }
 }
 
-.form_first_input{
-
-}
