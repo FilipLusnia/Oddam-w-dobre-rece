@@ -56,7 +56,7 @@ export default function FormFourthStep({handleNextPage, handlePrevPage, handleIn
                                 Kod <br/> pocztowy
                                 <input type="text" value={dataStack.zipCode}
                                     onChange={handleInfo('zipCode')}
-                                    maxlength="6"/>
+                                    maxLength="6"/>
                             </label>
                         </div>
 
@@ -65,7 +65,7 @@ export default function FormFourthStep({handleNextPage, handlePrevPage, handleIn
                                 Numer <br/> telefonu
                                 <input type="tel" value={dataStack.phone}
                                     onChange={handleInfo('phone')}
-                                    maxlength="9"/>
+                                    maxLength="9"/>
                             </label>
                         </div>
                     </div>
@@ -86,7 +86,7 @@ export default function FormFourthStep({handleNextPage, handlePrevPage, handleIn
                                 <input type="text" value={dataStack.time}
                                     onChange={handleInfo('time')}
                                     placeholder="hh:mm"
-                                    maxlength="5"/>
+                                    maxLength="5"/>
                             </label>
                         </div>
 

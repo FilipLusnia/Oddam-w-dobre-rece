@@ -6,4 +6,97 @@
     min-height: 100%;
     overflow: hidden;
     padding-left: 100px;
+
+    p{
+        font-size: 17px;
+        color: $color-5;
+    }
+
+    h2{
+        margin-top: 60px;
+        margin-bottom: 30px;
+        font-size: 26px;
+        font-weight: 600;
+    }
+
+    h3{
+        margin-top: 35px;
+        margin-bottom: 20px;
+        font-size: 19px;
+        font-weight: 600;
+    }
+
+
+    .form_summary_content{
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        font-weight: 600;
+
+        img{
+            height: 40px;
+            margin-right: 20px;
+        }
+    }
+    .form_summary_localization{
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+        font-weight: 600;
+
+        img{
+            height: 40px;
+            margin-right: 20px;
+        }
+    }
+    .form_summary_organization{
+        margin-bottom: 10px;
+    }
+
+    .form_summary_data_container{
+        display: flex;
+    }
+
+    .form_summary_adress{
+        margin-right: 250px;
+
+        p{
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+
+            span{
+                width: 100px;
+            }
+        }
+    }
+    .form_summary_duedate{
+        p{
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+
+            span{
+                width: 100px;
+            }
+        }
+
+        .form_summary_notes{
+            color: $color-5;
+            display: flex;
+            flex-direction: column;
+            max-width: 350px;
+            height: 150px;
+
+            p{
+                word-break: keep-all;
+            }
+
+            span{
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+
 }
