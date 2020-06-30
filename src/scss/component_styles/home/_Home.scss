@@ -6,11 +6,26 @@
     margin-top: 37px;
     position: absolute;
     font-size: 12px;
+
+    @media (max-width: 700px) {
+        align-items: center;
+        width: 100vw;
+    }
 }
 .header-top{
     margin-bottom: 35px;
 }
 .header-bottom{
+
+    @media (max-width: 700px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        background-color: $color-1;
+        width: 100vw;
+        padding-bottom: 20px;
+    }
 
     .start-button{
         border: 1px solid $color_5;
@@ -21,6 +36,16 @@
         outline: none;
         font-size: 15px;
         text-decoration: none;
+
+        @media (max-width: 700px) {
+            padding: 3px 10px;
+            font-size: 12px;
+            line-height: 30px;
+            border: none;
+            color: $color-2;
+            font-size: 20px;
+            margin-top: 20px;
+        }
     }
 
     .nav-button{
@@ -32,5 +57,10 @@
         cursor: pointer;
         outline: none;
         text-decoration: none;
+
+        @media (max-width: 700px) {
+            margin-left: 0px;
+            line-height: 30px;
+        }
     }
 }

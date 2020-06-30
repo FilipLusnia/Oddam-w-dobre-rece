@@ -3,6 +3,13 @@
     width: 90vw;
     display: flex;
     align-items: center;
+
+    @media(max-width: 700px){
+        justify-content: center;
+        width: 100vw;
+        height: 400px;
+        padding-top: 250px;
+    }
 }
 .main_img{
     background-image: url(../../../assets/Home-Hero-Image.jpg);
@@ -12,6 +19,10 @@
     left: 0;
     width: 700px;
     height: 100%;
+
+    @media(max-width: 700px){
+        display: none;
+    }
 }
 .main_title{
     display: flex;
@@ -23,6 +34,12 @@
     color: $color_5;
     margin-left: 30px;
     margin-top: 20px;
+
+    @media(max-width: 700px){
+        font-size: 4vw;
+        margin-left: 0;
+        margin-top: 70px;
+    }
 }
 .title_decor{
     background-image: url(../../../assets/Decoration.svg);
@@ -31,6 +48,12 @@
     width: 183px;
     height: 33px;
     margin: 20px 0 40px;
+
+    @media(max-width: 700px){
+        height: 4vw;
+        background-position: center;
+        margin-top: 10px;
+    }
 }
 .title_buttons{
     display: flex;
@@ -51,5 +74,12 @@
         text-decoration: none;
         border: none;
         text-align: center;
+    }
+
+    @media(max-width: 700px){
+        width: 140px;
+        height: 50px;
+        font-size: 15px;
+        line-height: 18px;
     }
 }

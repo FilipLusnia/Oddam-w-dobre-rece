@@ -21,6 +21,10 @@
     img{
         height: 27px;
         margin-bottom: 35px;
+
+        @media(max-width: 700px){
+            height: 5vw;
+        }
     }
     
 }
@@ -44,6 +48,13 @@
     cursor: pointer;
     line-height: 21px;
     transition: 0.3s;
+
+    @media(max-width: 700px){
+        margin: 0 10px;
+        font-size: 10px;
+        height: 45px;
+        width: 100px;
+    }
 }
 
 .fundations_btns_btn:hover{
@@ -56,6 +67,10 @@
     width: 540px;
     margin-bottom: 30px;
     line-height: 20px;
+
+    @media(max-width: 700px){
+        width: 90vw;
+    }
 }
 
 .fundations_item{
@@ -64,6 +79,10 @@
     width: 1044px;
     display: flex;
     align-items: center;
+
+    @media(max-width: 700px){
+        width: 90vw;
+    }
 }
 
 .fundations_item:last-child{
@@ -78,6 +97,10 @@
     font-size: 13px;
     box-sizing: border-box;
     padding-right: 15px;
+
+    @media(max-width: 700px){
+        font-size: 9px;
+    }
 }
 
 .fundations_item_container_headers{
@@ -87,6 +110,11 @@
     h1{ 
         font-size: 21px;
         margin-bottom: 5px;
+
+        @media(max-width: 700px){
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
     }
 }
 

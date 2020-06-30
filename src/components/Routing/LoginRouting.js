@@ -15,21 +15,22 @@ export default function LoginRouting() {
 
   const handleClick = () => {
     signOut();
-    window.location.reload();
-    customHistory.push("/");
+    customHistory.push("/wylogowano");
   }
 
   if (authUser !== null){
     return(
       <div className="logout_nav">
         <p>Zalogowano jako: <span>{currUser?.email}</span></p>
-        <Link to="/oddaj-rzeczy" className="logout_form">ODDAJ RZECZY</Link>
-        <button onClick={handleClick} className="logout_btn">Wyloguj</button>
+        <div>
+          <Link to="/oddaj-rzeczy" className="logout_nav_form">ODDAJ RZECZY</Link>
+          <button onClick={handleClick} className="logout_btn">Wyloguj</button>
+        </div>
       </div>
     )
   } else {
     return(
-      <div>
+      <div className="login_nav">
         <Link to="/logowanie" className="login_text">Zaloguj</Link>
         <Link to="/rejestracja" className="register_text">Załóż konto</Link>
       </div>

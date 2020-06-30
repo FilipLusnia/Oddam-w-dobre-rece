@@ -5,6 +5,10 @@
     position: relative;
     box-sizing: border-box;
     overflow: hidden;
+
+    @media (max-width: 700px) {
+    }
+    
 }
 
 .footer::after {
@@ -17,6 +21,10 @@
     position: absolute;
     opacity: 0.3;
     z-index: -1;
+
+    @media (max-width: 700px) {
+        background-size: cover;
+    }
 }
 
 .contact_container{
@@ -34,6 +42,10 @@
         margin-bottom: 20px;
         color: $color_5;
         text-align: center;
+
+        @media (max-width: 700px) {
+            font-size: 25px;
+        }
     }
 
     h4 {
@@ -41,11 +53,27 @@
         font-weight: 600;
         color: rgb(9, 190, 9);
         text-align: center;
+
+        @media (max-width: 700px) {
+            font-size: 10px;
+        }
     }
 
     img{
         width: 210px;
         margin-bottom: 20px;
+
+        @media (max-width: 700px) {
+            width: 20vw;
+        }
+    }
+
+    @media (max-width: 700px) {
+        top: auto;
+        right: auto;
+        justify-content: center;
+        height: 487px;
+        width: 100vw;
     }
 }
 
@@ -78,6 +106,11 @@
     ::placeholder {
         color: #3C3C3C26;
     }
+
+    @media (max-width: 700px) {
+        width: 90%;
+        align-items: center;
+    }
 }
 
 .contact_data{
@@ -107,6 +140,10 @@
             margin-top: 10px;
             background: none;
             max-height: 30px;
+
+            @media (max-width: 700px) {
+               width: 150px;
+            }
         }
     }
     .email{
@@ -128,7 +165,15 @@
             margin-top: 10px;
             background: none;
             max-height: 30px;
+
+            @media (max-width: 700px) {
+                width: 150px;
+            }
         }
+    }
+
+    @media (max-width: 700px) {
+        width: 100%;
     }
 
 }
@@ -152,19 +197,13 @@
     height: 40px;
     outline: none;
     cursor: pointer;
-    transform: translate(265%, 0)
+    transform: translate(265%, 0);
+
+    @media (max-width: 700px) {
+        transform: translate(0, 0);
+    }
 }
 .contact_btn:active{
     background-color: rgba(235, 235, 235, 0.705);
     transition: 0.1s;
-}
-
-.footer_bottom{
-    height: 20px;
-    width: 100vw;
-    bottom: 0;
-    position: absolute;
-    text-align: center;
-    font-size: 13px;
-    margin-bottom: 13px;
 }

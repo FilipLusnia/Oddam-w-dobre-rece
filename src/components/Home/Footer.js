@@ -116,9 +116,6 @@ export default function Footer() {
                     <input type="submit" className="contact_btn" value="Wyślij" onClick={handleClick}/>
                 </form>
             </div>
-            <div className="footer_bottom">
-                <p>Copyright by Coders Lab</p>
-            </div>
         </div>
     )
 }

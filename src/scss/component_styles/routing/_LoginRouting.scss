@@ -23,6 +23,16 @@
     span{
         color: $color_5;
     }
+
+    @media (max-width: 700px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        p{
+            margin-bottom: 15px;
+        }
+    }
 }
 
 .logout_btn{
@@ -36,7 +46,7 @@
     outline: none;
 }
 
-.logout_form{
+.logout_nav_form{
     color: $color_4;
     margin-left: 15px;
     font-family: $font-base;
@@ -46,4 +56,6 @@
     cursor: pointer;
     outline: none;
     text-decoration: none;
+    text-align: center;
+    min-width: 105px;
 }

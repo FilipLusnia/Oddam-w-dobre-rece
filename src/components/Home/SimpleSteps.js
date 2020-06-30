@@ -4,7 +4,7 @@ import {
 } from "react-router-dom";
 import { animateScroll as scroll } from 'react-scroll'
 
-import { ReactComponent as Decor } from '../../assets/Decoration.svg';
+import decor  from '../../assets/Decoration.svg';
 import icon1 from '../../assets/Icon-1.svg';
 import icon2 from '../../assets/Icon-2.svg';
 import icon3 from '../../assets/Icon-3.svg';
@@ -20,7 +20,7 @@ export default function SimpleSteps() {
         <div className="steps">
             <div className="steps_head">
                 <h1 className="steps_head_title">Wystarczą 4 proste kroki</h1>
-                <div className="steps_head_decor"><Decor/></div>
+                <img src={decor} alt="" className="steps_head_decor"/>
             </div> 
             <div className="steps_items">
                 <div className="steps_item one">

@@ -15,10 +15,20 @@
 .steps_head_title{
     font-size: 35px;
     margin: 50px 0 30px;
-    color: $color_5
+    color: $color_5;
+    text-align: center;
+
+    @media (max-width: 900px) {
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
 }
 .steps_head_decor{
     margin-bottom: 30px;
+
+    @media (max-width: 900px) {
+        height: 5vw;
+    }
 }
 
 
@@ -41,16 +51,28 @@
         text-align: center;
         width: 120px;
         margin: 0 75px;
+
+        @media (max-width: 900px) {
+            margin-top: 40px;
+         }
     }
     .three{
         text-align: center;
         width: 120px;
         margin: 0 75px;
+
+        @media (max-width: 900px) {
+            margin-top: 40px;
+         }
     }
     .four{
         text-align: center;
         width: 120px;
         margin: 0 75px;
+
+        @media (max-width: 900px) {
+            margin-top: 40px;
+         }
     }
 
     p{
@@ -60,6 +82,11 @@
 
     img{
         margin-bottom: 10px;
+    }
+
+    @media (max-width: 900px) {
+        flex-direction: column;
+        height: 900px;
     }
 }
 
@@ -79,5 +106,11 @@
         text-decoration: none;
         border: none;
         text-align: center;
+    }
+
+    @media (max-width: 900px) {
+        font-size: 17px;
+        width: 150px;
+        height: 50px;
     }
 }
