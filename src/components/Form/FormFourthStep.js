@@ -32,10 +32,10 @@ export default function FormFourthStep({handleNextPage, handlePrevPage, handleIn
                 <p>Krok 4/4</p>
 
                 <h2>Podaj adres oraz termin odbioru rzecz przez kuriera</h2>
-                <div className="">
-                    <div className="">
+                <div className="form_fourth_inputs">
+                    <div className="form_fourth_left">
                         <h3>Adres odbioru:</h3>
-                        <div>
+                        <div className="form_fourth_input_container">
                             <label>
                                 Ulica
                                 <input type="text" value={dataStack.street}
@@ -43,7 +43,7 @@ export default function FormFourthStep({handleNextPage, handlePrevPage, handleIn
                             </label>
                         </div>
 
-                        <div>
+                        <div className="form_fourth_input_container">
                             <label>
                                 Miasto
                                 <input type="text" value={dataStack.city}
@@ -51,26 +51,28 @@ export default function FormFourthStep({handleNextPage, handlePrevPage, handleIn
                             </label>
                         </div>
 
-                        <div>
+                        <div className="form_fourth_input_container">
                             <label>
-                                Kod pocztowy
+                                Kod <br/> pocztowy
                                 <input type="text" value={dataStack.zipCode}
-                                    onChange={handleInfo('zipCode')}/>
+                                    onChange={handleInfo('zipCode')}
+                                    maxlength="6"/>
                             </label>
                         </div>
 
-                        <div>
+                        <div className="form_fourth_input_container">
                             <label>
-                                Numer telefonu
+                                Numer <br/> telefonu
                                 <input type="tel" value={dataStack.phone}
-                                    onChange={handleInfo('phone')}/>
+                                    onChange={handleInfo('phone')}
+                                    maxlength="9"/>
                             </label>
                         </div>
                     </div>
 
-                    <div>
+                    <div className="form_fourth_right">
                         <h3>Termin odbioru:</h3>
-                        <div>
+                        <div className="form_fourth_input_container">
                             <label>
                                 Data
                                 <input type="date" value={dataStack.date}
@@ -78,18 +80,20 @@ export default function FormFourthStep({handleNextPage, handlePrevPage, handleIn
                             </label>
                         </div>
 
-                        <div>
+                        <div className="form_fourth_input_container">
                             <label>
                                 Godzina
                                 <input type="text" value={dataStack.time}
-                                    onChange={handleInfo('time')}/>
+                                    onChange={handleInfo('time')}
+                                    placeholder="hh:mm"
+                                    maxlength="5"/>
                             </label>
                         </div>
 
-                        <div>
+                        <div className="form_fourth_input_container">
                             <label>
-                                Uwagi dla kuriera
-                                <textarea rows="8" value={dataStack.courierNotes}
+                                Uwagi <br/> dla kuriera
+                                <textarea rows="4" cols="27" value={dataStack.courierNotes}
                                         onChange={handleInfo('courierNotes')}/>
                             </label>
                         </div>

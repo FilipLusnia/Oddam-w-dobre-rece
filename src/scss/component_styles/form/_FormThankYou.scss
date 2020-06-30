@@ -6,4 +6,23 @@
     min-height: 100%;
     overflow: hidden;
     padding-left: 100px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    font-weight: 300;
+    color: $color-5;
+
+    p{
+        margin-bottom: 20px;
+        line-height: 45px;
+        transform: translate(-350px, 0);
+    }
+
+    img{
+        height: 30px;
+        transform: translate(-350px, 0);
+    }
 }
