@@ -182,12 +182,26 @@
         font-weight: 600;
         margin-bottom: 9px;
     }
+
+    @media (max-width: 1000px) {
+        padding-left: 0;
+        align-items: center;
+        text-align: center;
+        font-size: 14px;
+        line-height: 4.5vw;
+        padding: 0 25px;
+    }
 }
 
 .form_btn_container{
     transform: translate(0px, -100px);
     padding-left: 100px;
     display: flex;
+
+    @media (max-width: 700px) {
+        padding-left: 0;
+        justify-content: space-evenly;
+    }
 }
 
 .form_btn{
@@ -211,6 +225,13 @@
         text-decoration: none;
         border: none;
         text-align: center;
+    }
+
+    @media (max-width: 700px) {
+        font-size: 15px;
+        width: 100px;
+        height: 45px;
+        margin-right: 0;
     }
 }
 
