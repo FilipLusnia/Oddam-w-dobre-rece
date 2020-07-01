@@ -8,6 +8,11 @@
         font-weight: 300;
         margin-bottom: 50px;
     }
+
+    @media (max-width: 700px) {
+        height: 1000px;
+        padding-top: 100px;
+    }
 }
 .form_head_img{
     background-image: url(../../../assets/Form-Hero-Image.jpg);
@@ -17,6 +22,10 @@
     left: 0;
     width: 60%;
     height: 100%;
+
+    @media (max-width: 700px) {
+        display: none;
+    }
 }
 .form_head_title{
     display: flex;
@@ -27,6 +36,12 @@
     line-height: 40px;
     color: $color_5;
     transform: translate(-80px, -40px);
+
+    @media (max-width: 700px) {
+        transform: translate(0, 0);
+        width: 100vw;
+        font-size: 5vw;
+    }
 }
 .form_title_decor{
     background-image: url(../../../assets/Decoration.svg);
@@ -35,9 +50,18 @@
     width: 183px;
     height: 33px;
     margin: 20px 0 10px;
+
+    @media (max-width: 700px) {
+        height: 4vw;
+        background-position: center;
+    }
 }
 .form_title_squares{
     display: flex;
+
+    @media (max-width: 700px) {
+        flex-direction: column;
+    }
 }
 
 .form_title_square{
@@ -56,6 +80,10 @@
         font-weight: 300;
         font-size: 28px;
         margin-bottom: 25px;
+
+        @media (max-width: 700px) {
+            font-size: 22px;
+        }
     }
 
     h3{
@@ -63,6 +91,10 @@
         font-weight: 300;
         font-size: 20px;
         line-height: 22px;
+
+        @media (max-width: 700px) {
+            font-size: 19px;
+        }
     }
 }
 
