@@ -29,7 +29,7 @@ export default function FormThirdStep({handleNextPage, handlePrevPage, handleInf
                 <p>Krok 3/4</p>
 
                 <h2>Lokalizacja:</h2>
-                    <div>
+                    <div className="form_third_select_container">
                         <select className="form_third_select" value={dataStack.localization}
                                 onChange={handleInfo('localization')}>
                             <option value="-wybierz-">- wybierz -</option>
