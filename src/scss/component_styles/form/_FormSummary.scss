@@ -7,6 +7,11 @@
     overflow: hidden;
     padding-left: 100px;
 
+    @media (max-width: 900px) {
+        padding: 0 25px;
+        background-image: none;
+    }
+
     p{
         font-size: 17px;
         color: $color-5;
@@ -17,6 +22,13 @@
         margin-bottom: 30px;
         font-size: 26px;
         font-weight: 600;
+
+        @media (max-width: 900px) {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 23px;
+            margin-bottom: 25px;
+        }
     }
 
     h3{
@@ -24,6 +36,11 @@
         margin-bottom: 20px;
         font-size: 19px;
         font-weight: 600;
+        
+        @media (max-width: 700px) {
+            font-size: 17px;
+            margin-top: 25px;
+        }
     }
 
 
@@ -33,9 +50,23 @@
         margin-bottom: 20px;
         font-weight: 600;
 
+        @media (max-width: 700px) {
+            margin-bottom: 15px;
+        }
+
         img{
             height: 40px;
             margin-right: 20px;
+
+            @media (max-width: 700px) {
+                height: 30px;
+            }
+        }
+
+        p{
+            @media (max-width: 700px) {
+                font-size: 13px;
+            }
         }
     }
     .form_summary_localization{
@@ -44,13 +75,33 @@
         margin-bottom: 30px;
         font-weight: 600;
 
+        @media (max-width: 700px) {
+            margin-bottom: 15px;
+        }
+
         img{
             height: 40px;
             margin-right: 20px;
+
+            @media (max-width: 700px) {
+                height: 30px;
+            }
+        }
+
+        p{
+            @media (max-width: 700px) {
+                font-size: 13px;
+            }
         }
     }
     .form_summary_organization{
         margin-bottom: 10px;
+        line-height: 25px;
+
+        @media (max-width: 700px) {
+            margin-bottom: 0;
+            font-size: 13px;
+        }
     }
 
     .form_summary_data_container{
@@ -60,13 +111,36 @@
     .form_summary_adress{
         margin-right: 250px;
 
+        @media (max-width: 1200px) {
+            margin-right: 40px;
+        }
+
         p{
             margin-bottom: 25px;
             display: flex;
             align-items: center;
 
+            @media (max-width: 700px) {
+                font-size: 14px;
+                flex-direction: column;
+                align-items: flex-start;
+                margin-bottom: 15px;
+                max-width: 140px;
+                overflow: hidden;
+            }
+
             span{
                 width: 100px;
+
+                @media (max-width: 900px) {
+                    width: 90px;
+                }
+
+                @media (max-width: 700px) {
+                    width: 80px;
+                    font-weight: 600;
+                    margin-bottom: 8px;
+                }
             }
         }
     }
@@ -76,8 +150,25 @@
             display: flex;
             align-items: center;
 
+            @media (max-width: 700px) {
+                font-size: 14px;
+                flex-direction: column;
+                align-items: flex-start;
+                margin-bottom: 15px;
+            }
+
             span{
                 width: 100px;
+
+                @media (max-width: 900px) {
+                    width: 90px;
+                }
+
+                @media (max-width: 700px) {
+                    width: 80px;
+                    font-weight: 600;
+                    margin-bottom: 8px;
+                }
             }
         }
 
@@ -94,6 +185,11 @@
 
             span{
                 margin-bottom: 15px;
+
+                @media (max-width: 900px) {
+                    font-weight: 600;
+                    font-size: 14px;
+                }
             }
         }
     }

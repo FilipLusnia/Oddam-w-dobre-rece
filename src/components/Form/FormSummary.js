@@ -9,10 +9,10 @@ export default function FormSummary({handleNextPage, handlePrevPage, dataStack})
             <div className="form_summary_container">
                 <h2>Podsumowanie Twojej darowizny</h2>
 
-                <h3 className="">Oddajesz:</h3>
+                <h3>Oddajesz:</h3>
                 <div className="form_summary_content">
                     <img src={icon1} alt=""/>
-                    <p className="">Ilość worków: {dataStack.bagsAmount}, 
+                    <p>Ilość worków: {dataStack.bagsAmount}, 
                         {dataStack.clothes && " ubrania do ponownego użycia, "}
                         {dataStack.trash && " ubrania do wyrzucenia, "}
                         {dataStack.toys && " zabawki, "}
@@ -23,7 +23,7 @@ export default function FormSummary({handleNextPage, handlePrevPage, dataStack})
                 </div>
                 <div className="form_summary_localization">
                     <img src={icon2} alt=""/>
-                    <p className="">dla lokalizacji: {dataStack.localization}</p>
+                    <p>dla lokalizacji: {dataStack.localization}</p>
                 </div>
 
                 <p className="form_summary_organization">
@@ -33,14 +33,14 @@ export default function FormSummary({handleNextPage, handlePrevPage, dataStack})
 
                 <div className="form_summary_data_container">
                     <div className="form_summary_adress">
-                        <h3 className="">Adres odbioru</h3>
+                        <h3>Adres odbioru</h3>
                         <p><span>Ulica</span> {dataStack.street}</p>
                         <p><span>Miasto</span> {dataStack.city}</p>
                         <p><span>Kod <br/> pocztowy</span> {dataStack.zipCode}</p>
                         <p><span>Numer <br/> telefonu</span> {dataStack.phone}</p>
                     </div>
                     <div className="form_summary_duedate">
-                        <h3 className="">Termin odbioru</h3>
+                        <h3>Termin odbioru</h3>
                         <p><span>Data</span> {dataStack.date}</p>
                         <p><span>Godzina</span> {dataStack.time}</p>
                         {dataStack.courierNotes && 

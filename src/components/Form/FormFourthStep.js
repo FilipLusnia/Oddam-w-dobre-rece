@@ -31,7 +31,7 @@ export default function FormFourthStep({handleNextPage, handlePrevPage, handleIn
             <div className="form_fourth_container">
                 <p>Krok 4/4</p>
 
-                <h2>Podaj adres oraz termin odbioru rzecz przez kuriera</h2>
+                <h2>Podaj adres oraz termin odbioru rzeczy przez kuriera</h2>
                 <div className="form_fourth_inputs">
                     <div className="form_fourth_left">
                         <h3>Adres odbioru:</h3>
