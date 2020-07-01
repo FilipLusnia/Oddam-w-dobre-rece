@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/Oddam_w_dobre_rece/static/css/main.4dffd3da.chunk.css",
-    "main.js": "/Oddam_w_dobre_rece/static/js/main.6642e3cb.chunk.js",
-    "main.js.map": "/Oddam_w_dobre_rece/static/js/main.6642e3cb.chunk.js.map",
-    "runtime-main.js": "/Oddam_w_dobre_rece/static/js/runtime-main.aebcc4cc.js",
-    "runtime-main.js.map": "/Oddam_w_dobre_rece/static/js/runtime-main.aebcc4cc.js.map",
-    "static/js/2.2a7754f6.chunk.js": "/Oddam_w_dobre_rece/static/js/2.2a7754f6.chunk.js",
-    "static/js/2.2a7754f6.chunk.js.map": "/Oddam_w_dobre_rece/static/js/2.2a7754f6.chunk.js.map",
-    "index.html": "/Oddam_w_dobre_rece/index.html",
-    "precache-manifest.118e6793e6796e066224793c4f99cec2.js": "/Oddam_w_dobre_rece/precache-manifest.118e6793e6796e066224793c4f99cec2.js",
-    "service-worker.js": "/Oddam_w_dobre_rece/service-worker.js",
-    "static/css/main.4dffd3da.chunk.css.map": "/Oddam_w_dobre_rece/static/css/main.4dffd3da.chunk.css.map",
-    "static/js/2.2a7754f6.chunk.js.LICENSE.txt": "/Oddam_w_dobre_rece/static/js/2.2a7754f6.chunk.js.LICENSE.txt",
-    "static/media/main.scss": "/Oddam_w_dobre_rece/static/media/Home-Hero-Image.e99903ed.jpg",
-    "static/media/Icon-1.svg": "/Oddam_w_dobre_rece/static/media/Icon-1.91147906.svg",
-    "static/media/Icon-2.svg": "/Oddam_w_dobre_rece/static/media/Icon-2.db91e33e.svg",
-    "static/media/Icon-3.svg": "/Oddam_w_dobre_rece/static/media/Icon-3.2cfe9dfe.svg",
-    "static/media/Icon-4.svg": "/Oddam_w_dobre_rece/static/media/Icon-4.436df0aa.svg",
-    "static/media/People.jpg": "/Oddam_w_dobre_rece/static/media/People.6fa36651.jpg",
-    "static/media/Signature.svg": "/Oddam_w_dobre_rece/static/media/Signature.e54cfcfc.svg"
+    "main.css": "/Oddam-w-dobre-rece/static/css/main.eded5bec.chunk.css",
+    "main.js": "/Oddam-w-dobre-rece/static/js/main.c422f1db.chunk.js",
+    "main.js.map": "/Oddam-w-dobre-rece/static/js/main.c422f1db.chunk.js.map",
+    "runtime-main.js": "/Oddam-w-dobre-rece/static/js/runtime-main.2ae0c14f.js",
+    "runtime-main.js.map": "/Oddam-w-dobre-rece/static/js/runtime-main.2ae0c14f.js.map",
+    "static/js/2.28506d04.chunk.js": "/Oddam-w-dobre-rece/static/js/2.28506d04.chunk.js",
+    "static/js/2.28506d04.chunk.js.map": "/Oddam-w-dobre-rece/static/js/2.28506d04.chunk.js.map",
+    "index.html": "/Oddam-w-dobre-rece/index.html",
+    "precache-manifest.981fedb2b0a28a9b3848cc192db57274.js": "/Oddam-w-dobre-rece/precache-manifest.981fedb2b0a28a9b3848cc192db57274.js",
+    "service-worker.js": "/Oddam-w-dobre-rece/service-worker.js",
+    "static/css/main.eded5bec.chunk.css.map": "/Oddam-w-dobre-rece/static/css/main.eded5bec.chunk.css.map",
+    "static/js/2.28506d04.chunk.js.LICENSE.txt": "/Oddam-w-dobre-rece/static/js/2.28506d04.chunk.js.LICENSE.txt",
+    "static/media/main.scss": "/Oddam-w-dobre-rece/static/media/Home-Hero-Image.e99903ed.jpg",
+    "static/media/Icon-1.svg": "/Oddam-w-dobre-rece/static/media/Icon-1.91147906.svg",
+    "static/media/Icon-2.svg": "/Oddam-w-dobre-rece/static/media/Icon-2.db91e33e.svg",
+    "static/media/Icon-3.svg": "/Oddam-w-dobre-rece/static/media/Icon-3.2cfe9dfe.svg",
+    "static/media/Icon-4.svg": "/Oddam-w-dobre-rece/static/media/Icon-4.436df0aa.svg",
+    "static/media/People.jpg": "/Oddam-w-dobre-rece/static/media/People.6fa36651.jpg",
+    "static/media/Signature.svg": "/Oddam-w-dobre-rece/static/media/Signature.e54cfcfc.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.aebcc4cc.js",
-    "static/js/2.2a7754f6.chunk.js",
-    "static/css/main.4dffd3da.chunk.css",
-    "static/js/main.6642e3cb.chunk.js"
+    "static/js/runtime-main.2ae0c14f.js",
+    "static/js/2.28506d04.chunk.js",
+    "static/css/main.eded5bec.chunk.css",
+    "static/js/main.c422f1db.chunk.js"
   ]
 }
