@@ -17,4 +17,4 @@ If you want to run it locally, `clone` this repo and type `npm start`.
 
 [Firebase]:https://firebase.google.com/
 [CRA]:https://github.com/facebook/create-react-app/
-[here]:https://filiplusnia.github.io/Oddam_w_dobre_rece/
+[here]:https://filiplusnia.github.io/Oddam-w-dobre-rece/

@@ -2,7 +2,7 @@
   "name": "owdr",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://filiplusnia.github.io/Oddam_w_dobre_rece/",
+  "homepage": "https://filiplusnia.github.io/Oddam-w-dobre-rece/",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
