@@ -61,8 +61,7 @@
 }
 
 .about_img{
-    max-width: 70%;
-    min-width: 1000px;
+    overflow: hidden;
 
     @media(max-width: 900px){
         display: none;
