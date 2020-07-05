@@ -27,7 +27,7 @@ export default function FormSummary({handleNextPage, handlePrevPage, dataStack})
                 </div>
 
                 <p className="form_summary_organization">
-                    Nazwa wybranej organizacji:
+                    <span>Nazwa wybranej organizacji: </span>
                     {dataStack.organization && ` ${dataStack.organization}`}
                 </p>
 
