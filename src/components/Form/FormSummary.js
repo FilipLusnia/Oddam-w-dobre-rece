@@ -26,10 +26,14 @@ export default function FormSummary({handleNextPage, handlePrevPage, dataStack})
                     <p>dla lokalizacji: {dataStack.localization}</p>
                 </div>
 
-                <p className="form_summary_organization">
-                    <span>Nazwa wybranej organizacji: </span>
-                    {dataStack.organization && ` ${dataStack.organization}`}
-                </p>
+                {dataStack.organization? 
+                    <p className="form_summary_organization">
+                        <span>Nazwa wybranej organizacji: </span>
+                        {dataStack.organization && ` ${dataStack.organization}`}
+                    </p>
+                :
+                    null
+                }
 
                 <div className="form_summary_data_container">
                     <div className="form_summary_adress">
