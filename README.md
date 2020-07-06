@@ -1,6 +1,6 @@
 ### Demo
 
-To see the live page, go [here].
+To see the live page and to test it out, go [here].
 
 # Oddam w dobre ręce
 
