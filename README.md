@@ -1,5 +1,4 @@
-# Demo
-To see the page in action, click [here].
+TO SEE THE LIVE PAGE, CLICK [here].
 
 # Oddam w dobre ręce
 
