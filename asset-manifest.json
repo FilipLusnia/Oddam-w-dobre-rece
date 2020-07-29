@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Oddam-w-dobre-rece/static/css/main.0d458a02.chunk.css",
-    "main.js": "/Oddam-w-dobre-rece/static/js/main.52db0fb6.chunk.js",
-    "main.js.map": "/Oddam-w-dobre-rece/static/js/main.52db0fb6.chunk.js.map",
+    "main.js": "/Oddam-w-dobre-rece/static/js/main.00165cd6.chunk.js",
+    "main.js.map": "/Oddam-w-dobre-rece/static/js/main.00165cd6.chunk.js.map",
     "runtime-main.js": "/Oddam-w-dobre-rece/static/js/runtime-main.2ae0c14f.js",
     "runtime-main.js.map": "/Oddam-w-dobre-rece/static/js/runtime-main.2ae0c14f.js.map",
     "static/js/2.95eafd38.chunk.js": "/Oddam-w-dobre-rece/static/js/2.95eafd38.chunk.js",
     "static/js/2.95eafd38.chunk.js.map": "/Oddam-w-dobre-rece/static/js/2.95eafd38.chunk.js.map",
     "index.html": "/Oddam-w-dobre-rece/index.html",
-    "precache-manifest.3f60748558a81a385b5ca7163efddab4.js": "/Oddam-w-dobre-rece/precache-manifest.3f60748558a81a385b5ca7163efddab4.js",
+    "precache-manifest.c4796278f8f0e27e36d55228dcc5a87b.js": "/Oddam-w-dobre-rece/precache-manifest.c4796278f8f0e27e36d55228dcc5a87b.js",
     "service-worker.js": "/Oddam-w-dobre-rece/service-worker.js",
     "static/css/main.0d458a02.chunk.css.map": "/Oddam-w-dobre-rece/static/css/main.0d458a02.chunk.css.map",
     "static/js/2.95eafd38.chunk.js.LICENSE.txt": "/Oddam-w-dobre-rece/static/js/2.95eafd38.chunk.js.LICENSE.txt",
@@ -24,6 +24,6 @@
     "static/js/runtime-main.2ae0c14f.js",
     "static/js/2.95eafd38.chunk.js",
     "static/css/main.0d458a02.chunk.css",
-    "static/js/main.52db0fb6.chunk.js"
+    "static/js/main.00165cd6.chunk.js"
   ]
 }
