@@ -22,6 +22,7 @@ export default function App() {
   const {fbauth} = useContext(FirebaseContext);
   const [ ,setAuthUser] = useContext(ProvideAuth);
 
+  const [splashScreen, setSplashScreen] = useState(true);
   const [registeredMess, setRegisteredMess] = useState("");
 
   useEffect(() => {
@@ -31,26 +32,35 @@ export default function App() {
       } else {
           setAuthUser(null);
       }
-    });
+      setSplashScreen(false)
+    })
   }, [fbauth, setAuthUser])
 
-  const isRegisteredMess = (e) => {
+  const isRegisteredMess = e => {
     setRegisteredMess(e);
   }
 
   return (
-    <Router>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/logowanie" 
-          render={props => <Login {...props} registeredMess={registeredMess} />}
-        />
-        <Route exact path="/rejestracja" 
-          render={props => <Register {...props} isRegisteredMess={isRegisteredMess} />}
-        />
-        <Route exact path="/oddaj-rzeczy" component={Form} />
-        <Route exact path="/wylogowano" component={Logoutn} />
-      </Switch>
-    </Router>
+    <>
+    {
+    !splashScreen ?
+      <Router>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/logowanie" 
+            render={props => <Login {...props} registeredMess={registeredMess} />}
+          />
+          <Route exact path="/rejestracja" 
+            render={props => <Register {...props} isRegisteredMess={isRegisteredMess} />}
+          />
+          <Route exact path="/oddaj-rzeczy" component={Form} />
+          <Route exact path="/wylogowano" component={Logoutn} />
+        </Switch>
+      </Router>
+    
+    :
+      <div className="splashScreen">Jeszcze sekundka, ładujemy twoje dane...</div>
+    }
+    </>
   )
 }
