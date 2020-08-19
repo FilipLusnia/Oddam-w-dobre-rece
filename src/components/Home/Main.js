@@ -22,7 +22,7 @@ export default function Main() {
                         <Link to="/oddaj-rzeczy" onClick={handleClick} className="title_button text">ODDAJ RZECZY</Link>
                     </div>
                     <div className="title_button">
-                        <Link to="/" className="title_button text">ZORGANIZUJ ZBÓRKĘ</Link>
+                        <Link to="/" className="title_button text">ZORGANIZUJ ZBÓRKĘ <span>(niedostępne na obecną chwilę)</span></Link>
                     </div>
                 </div>
             </div>
