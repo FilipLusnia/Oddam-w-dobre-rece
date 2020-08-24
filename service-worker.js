@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Oddam-w-dobre-rece/precache-manifest.435ba7c33b552c33dd044a5d21668450.js"
+  "/Oddam-w-dobre-rece/precache-manifest.32f6502e414e1db62cfa7a350f8e2227.js"
 );
 
 self.addEventListener('message', (event) => {
