@@ -41,7 +41,7 @@ export default function WhoWeHelp() {
                 <div className="fundations_item_container">
                     <div className="fundations_item_container_headers">
                         <h1>{item.header}</h1>
-                        <h4>{item.subheader}</h4>
+                        <h2>{item.subheader}</h2>
                     </div>
                 <p>{item.desc}</p>
                 </div>

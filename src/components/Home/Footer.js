@@ -94,7 +94,7 @@ export default function Footer() {
             <div className="contact_container">
                 <h1>Skontaktuj się z nami</h1>
                 <img src={decor} alt="" className="about_decor"></img>
-                <h4>{succesMess}</h4>
+                <h2>{succesMess}</h2>
                 <form className="footer_contact">
                     <div className="contact_data">
                         <label className="contact_data name">
